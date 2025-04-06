@@ -1,0 +1,25 @@
+Explain why we need long long int data type? 
+bangla:--> আমাদের কেন long long int ডেটা টাইপের প্রয়োজন তা ব্যাখ্যা করো?
+
+answer:- একটা ইন্টিজার ভেরিয়েবল এ টেনটু দি পাওয়ার নাইন 10^9 পর্যন্ত সংখ্যা রাখতে পারে। এর থেকে বড় ভ্যালু রাখতে পারে না। যদি এর থেকে বড় ভ্যালু হয় তখন লং লং ইন্টিজার ব্যাবহার করা হয়। লং লং ইন্টিজার মেমরিতে ৮ বাইট জায়গা দখল করে। সে মোটামুটি টেনটু দি পাওয়ার এইটইন 10^18 পর্যন্ত ভ্যালু রাখতে পারে।
+
+
+Question:--> Write all the rules for naming a variable in C programming.
+bangla:--> সি প্রোগ্রামিংয়ে একটি ভেরিয়েবলের নামকরণের সকল নিয়ম লিখ।
+Answer:-> tamim
+          _tamim
+          tamim123
+          tamim_123 
+
+
+Question:-> Write a C program that will take 2 numbers from the user and then print the 2nd number first and then first number.  
+bangla:-> একটি সি প্রোগ্রাম লিখুন যা ব্যবহারকারীর কাছ থেকে 2টি সংখ্যা নেবে এবং তারপর প্রথমে 2য় সংখ্যাটি এবং তারপর প্রথম সংখ্যাটি প্রিন্ট করবে।
+Answer : -->
+#include <stdio.h>
+int main() {
+    int a;
+    int b;
+    scanf("%d %d", &a, &b);
+    printf("%d %d", b, a);
+    return 0;
+}
