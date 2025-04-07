@@ -6,9 +6,9 @@ int main() {
     int number;
     scanf("%d", &number);
     if (number % 2 == 0) {
-        printf("%d is an even number.\n", number);
+        printf("This is a even number.");
     } else {
-        printf("%d is an odd number.\n", number);
+        printf("This is a odd number.");
     }
     return 0;
 }
@@ -30,3 +30,6 @@ int main() {
 //     }
 //     return 0;
 // }
+
+// Question:- Explain if else ladder.
+// Answer:- ইফ এলস লিডার হচ্ছে যখন অনেক গুলা কন্ডিশান নিয়ে কাজ করতে হয় তখন ইফ এলস লিডার ব্যাবহার করা হয়। ইফ এলস এর মাজখানে এলস ইফ ব্যাবহার করা হয়। ইফ এলস এর মাজখানে যত খুশি তত এলস ইফ ব্যাবহার করা হয়।
