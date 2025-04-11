@@ -1,4 +1,3 @@
-summation = 17
-subtraction = 13
-multiplication = 30
-division = 7.500000
+I will buy Punjabi
+I will buy new shoes
+Alisa will buy new shoes
