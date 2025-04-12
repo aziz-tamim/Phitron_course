@@ -1,13 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    for(int i=1; i<=10; i++)
+    for(int i=100; i>=1; i--)
     {
-        if(i==5)
+        if(i%2!=0)
         {
-            break;
-        }
         printf("%d\n",i);
+        }
     }
+    return 0;
 }
-

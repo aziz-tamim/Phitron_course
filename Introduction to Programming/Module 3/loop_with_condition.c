@@ -25,18 +25,37 @@
 // }
 
 
+// #include<stdio.h>
+// int main()
+// {
+//     for(int i=1; i<=10; i++)
+//     {
+//         if(i%2==0)
+//         {
+//             printf("%d - Even\n",i);
+//         }
+//         else
+//         {
+//             printf("%d - Odd\n",i);
+//         }
+//     }
+// }
+
 #include<stdio.h>
 int main()
 {
-    for(int i=1; i<=10; i++)
+    int N;
+    scanf("%d",&N);
+    for(int i=1; i<=N; i++)
     {
-        if(i%2==0)
+        printf("%d ",i);
+        if(i%5==0)
         {
-            printf("%d - Even\n",i);
+            printf("Yes\n");
         }
-        else
-        {
-            printf("%d - Odd\n",i);
+        else{
+            printf("No\n");
         }
     }
+    return 0;
 }
