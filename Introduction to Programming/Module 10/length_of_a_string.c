@@ -4,7 +4,7 @@
 //     char s[101];
 //     scanf("%s",s);
 //     int count = 0;
-//     for (int i=0;s[i] !='\0';i++)
+//     for(int i=0;i<s[i] != '\0' ;i++);
 //     {
 //         count++;
 //     }
