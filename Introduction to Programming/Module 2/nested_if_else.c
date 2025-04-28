@@ -10,7 +10,7 @@ int main()
         {
             printf("Saint Martin jabo\n");
         }
-        else 
+        else
         {
             printf("cox's bazar theke ferot ashbo\n");
         }
