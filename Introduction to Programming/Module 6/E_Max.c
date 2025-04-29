@@ -4,11 +4,11 @@
 //     int n;
 //     scanf("%d",&n);
 //     int mx = 0;
-//     for(int i=1;i<=n;i++)
+//     for(int i=0;i<=n;i++)
 //     {
 //         int val;
 //         scanf("%d",&val);
-//         if(val>mx)
+//         if(val > mx)
 //         {
 //             mx = val;
 //         }
