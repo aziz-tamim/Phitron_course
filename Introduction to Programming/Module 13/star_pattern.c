@@ -16,7 +16,7 @@
 // }
 
 
-/// ulto pring star
+/// ulto printing star
 #include<stdio.h>
 int main()
 {

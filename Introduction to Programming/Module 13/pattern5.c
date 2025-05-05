@@ -11,7 +11,7 @@ int main()
         {
             printf(" ");
         }
-        for(int j=1; j<=val;j++)   // for printing star
+        for(int j=1; j<=val;j++)   // for printing value
         {
             printf("%d ",j);
         }
