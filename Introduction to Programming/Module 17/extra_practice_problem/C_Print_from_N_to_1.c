@@ -7,6 +7,14 @@ void print_form(int n, int i)
     }
     print_form(n,i+1);
     printf("%d ",i);
+    // if(i==1)
+    // {
+    //     printf("%d",i);
+    // }
+    // else
+    // {
+    //     printf("%d ",i);
+    // }
 }
 int main()
 {
