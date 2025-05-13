@@ -6,7 +6,14 @@ void print_form(int n, int i)
         return;
     }
     print_form(n,i+1);
-    printf("%d ",i);
+    if(i==1)
+    {
+        printf("%d",i);
+    }
+    else
+    {
+        printf("%d ",i);
+    }
     
 }
 int main()
@@ -16,13 +23,3 @@ int main()
     print_form(n,1);
     return 0;
 }
-
-
-// if(i==1)
-// {
-//     printf("%d",i);
-// }
-// else
-// {
-//     printf("%d ",i);
-// }

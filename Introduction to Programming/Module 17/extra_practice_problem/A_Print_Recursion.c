@@ -12,6 +12,6 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    print_recurtion(n,1);
+    print_recurtion(n,0);
     return 0;
 }

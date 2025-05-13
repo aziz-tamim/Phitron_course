@@ -36,7 +36,7 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
-    if(r==clearerr_s)
+    if(r==c)
     {
         printf("This is a square matrix");
     }

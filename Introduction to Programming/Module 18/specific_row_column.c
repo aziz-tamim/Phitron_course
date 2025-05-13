@@ -21,7 +21,6 @@
 
 
 // specific row input print 
-
 #include<stdio.h>
 int main()
 {
