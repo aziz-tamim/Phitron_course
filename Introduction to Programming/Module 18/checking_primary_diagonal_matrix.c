@@ -14,7 +14,6 @@ int main()
         }
     }
 
-
     int is_diagonal = true;
     if (r == c)
     {
@@ -32,7 +31,6 @@ int main()
                     if (a[i][j] != 0)
                     {
                         is_diagonal = false;
-                        printf("This is not a diagonal matrix\n");
                     }
                 }
             }
@@ -40,6 +38,10 @@ int main()
         if(is_diagonal == true)
         {
             printf("This is a primary diagonal matrix\n");
+        }
+        else
+        {
+            printf("This is not a diagonal matrix\n");
         }
     }
     else
