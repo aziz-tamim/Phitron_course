@@ -18,7 +18,7 @@ int main()
     scanf("%d",&n);
     for(int i=1; i<=n; i++)
     {
-        if(lucky(i) && n%i ==0)
+        if(lucky(i) && n%i == 0)
         {
             printf("YES\n");
             return 0;
