@@ -2,7 +2,7 @@
 int char_to_ascii(char c)
 {
     return c;
-}
+} 
 int main()
 {
     char c;

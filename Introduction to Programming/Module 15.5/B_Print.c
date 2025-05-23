@@ -4,9 +4,7 @@ void number(int n){
 
     for (int i = 1; i <= n; i++)
     {
-        if (i > 1)
-            printf(" "); 
-        printf("%d", i);
+        printf("%d ",i);
     }
 }
 int main()
