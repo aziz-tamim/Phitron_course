@@ -37,7 +37,7 @@ int main()
         }
         else
         {
-            printf("This is not a diagonal matrix\n");
+            printf("This is not a secondary diagonal matrix\n");
         }
     }
     else
