@@ -4,5 +4,5 @@ int main()
 {
     int x = 6;
     x%2 == 0 ? cout << "Even\n" : cout << "Odd\n";
-    return  0;
+    return 0;
 }
