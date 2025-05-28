@@ -1,0 +1,3 @@
+
+    cout << endl;
+     delete[] arr;
