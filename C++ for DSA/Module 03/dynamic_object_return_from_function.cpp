@@ -7,7 +7,7 @@ class Student
     int cls;
     double gpa;
 
-    Student(int roll, int cls, double gpa) // jokhon variable er name ta same hobe tokhon (this) usde korte hobe.
+    Student(int roll, int cls, double gpa) // jokhon variable er name ta same hobe tokhon (this) use korte hobe.
     {
         this->roll = roll;
         this->cls = cls;

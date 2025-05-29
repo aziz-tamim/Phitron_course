@@ -1,0 +1,1 @@
+{"name":"Local: E_max","url":"d:\\Phitron\\C++ for DSA\\Module 2.5\\E_max.cpp","tests":[{"id":1748428041791,"input":"5\n1 8 5 7 5\n","output":"8\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\C++ for DSA\\Module 2.5\\E_max.cpp","group":"local","local":true}

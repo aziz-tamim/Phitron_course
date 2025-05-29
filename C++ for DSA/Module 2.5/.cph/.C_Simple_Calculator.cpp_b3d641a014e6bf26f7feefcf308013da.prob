@@ -1,0 +1,1 @@
+{"name":"Local: C_Simple_Calculator","url":"d:\\Phitron\\C++ for DSA\\Module 2.5\\C_Simple_Calculator.cpp","tests":[{"id":1748427914115,"input":"5 10\n","output":"5 + 10 = 15\n5 * 10 = 50\n5 - 10 = -5\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\C++ for DSA\\Module 2.5\\C_Simple_Calculator.cpp","group":"local","local":true}

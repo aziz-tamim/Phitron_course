@@ -3,7 +3,7 @@ using namespace std;
 int* fun()
 {
     // int a[5]; // static array function theke return hole static arry ke pawa jai na
-    int *a = new int[5];  // dynamic array function theke return hole o dynamic arry ke pawa jai 
+    int *a = new int[5];  // dynamic array function theke return hole o dynamic array ke pawa jai 
     for(int i=0; i<5; i++)
     {
         cin >> a[i];
