@@ -1,0 +1,1 @@
+{"name":"Local: sort_it_2","url":"d:\\Phitron\\C++ for DSA\\Module_4_Mid_term_exam\\sort_it_2.cpp","tests":[{"id":1748574389601,"input":"5\n10 50 30 20 40","output":"50 40 30 20 10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\C++ for DSA\\Module_4_Mid_term_exam\\sort_it_2.cpp","group":"local","local":true}

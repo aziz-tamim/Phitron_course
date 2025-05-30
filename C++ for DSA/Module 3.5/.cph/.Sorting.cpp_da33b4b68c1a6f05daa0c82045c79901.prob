@@ -1,0 +1,1 @@
+{"name":"Local: Sorting","url":"d:\\Phitron\\C++ for DSA\\Module 3.5\\Sorting.cpp","tests":[{"id":1748505475402,"input":"3\n3 1 2\n","output":"1 2 3 \n"},{"id":1748505486317,"input":"4\n5 2 7 3\n","output":"2 3 5 7 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\C++ for DSA\\Module 3.5\\Sorting.cpp","group":"local","local":true}

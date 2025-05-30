@@ -1,0 +1,1 @@
+{"name":"Local: Practice_problem_1","url":"d:\\Phitron\\C++ for DSA\\Module 3.5\\Practice_problem_1.cpp","tests":[{"id":1748509774047,"input":"Salman 1 A 80 8\nTamim 1 B 90 8\nAziz 1 B 95 8","output":"Aziz"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\C++ for DSA\\Module 3.5\\Practice_problem_1.cpp","group":"local","local":true}
