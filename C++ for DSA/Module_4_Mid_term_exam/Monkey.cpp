@@ -16,6 +16,5 @@ int main()
         sort(tem.begin(),tem.end());
         cout << tem << endl;
     }
-    
     return 0;
 }
