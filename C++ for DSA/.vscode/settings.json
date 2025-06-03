@@ -40,6 +40,8 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "random": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp"
     }
 }
