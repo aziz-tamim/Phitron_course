@@ -13,7 +13,7 @@ class Cricketer
 };
 int main()
 {
-    Cricketer* dhoni = new Cricketer("India", 0);
+    Cricketer* dhoni = new Cricketer("India", 50);
     Cricketer* kohli = new Cricketer("India", 18);
     *kohli = *dhoni;
     delete dhoni;
