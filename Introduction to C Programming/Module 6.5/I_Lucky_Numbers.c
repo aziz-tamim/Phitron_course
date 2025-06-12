@@ -23,7 +23,8 @@ int main() {
 
 //     int first_digit = n/10;
 //     int second_digit = n%10;
-//     if(second_digit==0)
+
+//     if(second_digit == 0)
 //     {
 //         printf("YES\n");
 //     }
