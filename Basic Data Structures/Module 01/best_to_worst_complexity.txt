@@ -1,0 +1,18 @@
+N = 1000
+
+
+Constant:       O(1)       -> 1  Constant complexity input er upor depend kore na. input er man jai thakuk she akta operation return kore
+Linear:         O(N)       -> 1000
+Logarithmic:    O(logN)    -> 10
+Square root:    O(sqrt(N)) -> 32
+quadratic:      O(N*N)     -> 100000
+Linearithmic:   O(NlogN)   -> 10000
+
+
+
+Constant:       O(1)
+Logarithmic:    O(logN)
+Square root:    O(sqrt(N))
+Linear:         O(N)
+Linearithmic:   O(NlogN)
+quadratic:      O(N*N)
