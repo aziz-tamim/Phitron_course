@@ -1,0 +1,7 @@
+// problem 1 O(N*N)
+// problem 2 O(N*N)
+// problem 3 O(N * sqrt(N))
+// problem 4 O(N*N*N)
+// problem 5 O(sqrt(N))
+// problem 6 O(NlogN)
+// problem 7 O(N*NlogN)
