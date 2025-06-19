@@ -1,0 +1,1 @@
+{"name":"Local: New_Array","url":"d:\\Phitron\\Basic Data Structures\\Module 02\\Extra_practice_problem\\New_Array.cpp","tests":[{"id":1750300924921,"input":"2\n1 2\n3 4","output":"3 4 1 2 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Basic Data Structures\\Module 02\\Extra_practice_problem\\New_Array.cpp","group":"local","local":true}
