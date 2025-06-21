@@ -28,3 +28,5 @@ int main()
     }
     return 0;
 }
+
+// this program time complexity O(N)
