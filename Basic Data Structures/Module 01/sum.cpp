@@ -11,7 +11,7 @@ int main()
     // {
     //     sum += i;
     // }
-
+    
     // using formula
     sum = (n*(n+1)/2);
 
