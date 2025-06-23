@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n, q;
+    int n,q;
     cin >> n >> q;
     int a[n];
     for(int i=0; i<n; i++)
@@ -17,7 +17,7 @@ int main()
         int flag = 0;
         int l = 0;
         int r = n-1;
-        while (l <= r)
+        while(l <= r)
         {
             int mid = (l+r)/2;
             if(a[mid] == val)
@@ -29,7 +29,8 @@ int main()
             {
                 r = mid - 1;
             }
-            else {
+            else
+            {
                 l = mid + 1;
             }
         }
