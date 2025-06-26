@@ -32,7 +32,6 @@ int main()
         }
         
     }
-    
 
     if(flag==1)
     {
