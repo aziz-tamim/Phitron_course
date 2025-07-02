@@ -13,20 +13,18 @@ class Node
     }
 };
 
-void insert_at_any_pos(Node* &head, int idx, int val)
+void insert_at_tail(Node* &head, Node* &tail, int val)
 {
     Node* newnode = new Node(val);
-    Node* tmp = head;
-    for(int i=1; i<idx; i++)
+    if(head == NULL)
     {
-        tmp = tmp->next;
-        if(tmp == NULL)
-        {
-            return;
-        }
+        head = newnode;
+        tail = newnode;
+        return;
     }
-    newnode->next = tmp->next;
-    tmp->next = newnode;
+
+    tail->next = newnode;
+    tail = tail->next;
 }
 
 void print_linked_list(Node* head)
@@ -40,16 +38,19 @@ void print_linked_list(Node* head)
 }
 int main()
 {
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* b = new Node(30);
+    Node* head = NULL;
+    Node* tail = NULL;
 
-    head->next = a;
-    a->next = b;
-
-    insert_at_any_pos(head,2,100);
-    insert_at_any_pos(head,2,200);
+    int val;
+    while (true)
+    {
+        cin >> val;
+        if(val == -1)
+        {
+            break;
+        }
+        insert_at_tail(head,tail,val);
+    }
     print_linked_list(head);
     return 0;
 }
-

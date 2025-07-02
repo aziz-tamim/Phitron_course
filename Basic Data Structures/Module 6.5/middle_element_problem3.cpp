@@ -79,7 +79,7 @@ class Node
     }
 };
 
-void print_linked_list(Node* head)
+void print_linked_list(Node* &head)
 {
     Node* tmp = head;
     int cnt = 0;

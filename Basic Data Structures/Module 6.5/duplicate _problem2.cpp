@@ -79,7 +79,7 @@ class Node
     }
 };
 
-void cnt_duplicate_val(Node* head)
+void cnt_duplicate_val(Node* &head)
 {
     int freq[101] = {0};
 
@@ -97,7 +97,7 @@ void cnt_duplicate_val(Node* head)
     cout << "NO" << endl;
 }
 
-void print_linked_list(Node* head)
+void print_linked_list(Node* &head)
 {
     Node* tmp = head;
     while(tmp != NULL)
