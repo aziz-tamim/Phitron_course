@@ -27,37 +27,26 @@ void insert_at_tail(Node* &head, Node* &tail, int val)
     tail = tail->next;
 }
 
-void print_reverse(Node* tmp)
+void max_min_def_count(Node* head)
 {
-    // base case
-    if(tmp == NULL)
-    {
-        return;
-    }
-    print_reverse(tmp->next);
-    cout << tmp->val << endl;
-}
-
-void max_count(Node* head)
-{
-    int mx = INT_MIN;
+    int max = INT_MIN;
     int min = INT_MAX;
+
     Node* tmp = head;
     while(tmp != NULL)
     {
-        if(tmp->val > mx)
+        if(tmp->val > max)
         {
-            mx = tmp->val;
+            max = tmp->val;
         }
-        else if(tmp->val < min)
+        if(tmp->val < min)
         {
             min = tmp->val;
         }
-        else
-        {
-            tmp = tmp->next;
-        }
+        tmp = tmp->next;
     }
+    int deference = max - min;
+    cout << deference << endl;
 }
 
 int main()
@@ -75,6 +64,6 @@ int main()
         }
         insert_at_tail(head,tail,val);
     }
-    max_count(head);
+    max_min_def_count(head);
     return 0;
 }
