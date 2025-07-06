@@ -20,7 +20,7 @@ int main()
     // maximum
     if(a >= b && a >= c)
     {
-        printf("%d",a);
+        printf("%d", a);
     }
     else if(b >= a && b >= c)
     {
@@ -32,4 +32,3 @@ int main()
     }
     return 0;
 }
-
