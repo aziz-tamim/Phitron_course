@@ -6,6 +6,7 @@
         "valarray": "cpp",
         "*.tcc": "cpp",
         "new": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "random": "cpp"
     }
 }
