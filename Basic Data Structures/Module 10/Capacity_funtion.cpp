@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     // vector<int> v = {10,20,30};
-    // list<int> l2(v.begin(),v.end());
+    // list<int> l2(v.begin(), v.end());
     // l2.clear();
     // cout << l2.size() << endl;
     // for(int val : l2)
@@ -12,7 +12,7 @@ int main()
     // }
 
     // vector<int> v = {10,20,30};
-    // list<int> l2(v.begin(),v.end());
+    // list<int> l2(v.begin(), v.end());
     // l2.clear();
     // cout << l2.size() << endl;
     // if(l2.empty())

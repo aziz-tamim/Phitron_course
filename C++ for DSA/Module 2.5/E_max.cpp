@@ -14,7 +14,7 @@ int main()
     {
         mx = max(a[i],mx);
         // if(a[i] > max)
-        //     max = a[i];
+            // max = a[i];
     }
     cout << mx << endl;
     return 0;
