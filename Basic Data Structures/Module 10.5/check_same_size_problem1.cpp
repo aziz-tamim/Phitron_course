@@ -6,26 +6,24 @@ class Node
     public:
         int val;
         Node* next;
-        Node* prev;
     Node(int val)
     {
         this->val = val;
         this->next = NULL;
-        this->prev = NULL;
     }
 };
 
 void insert_at_tail(Node* &head, Node* &tail, int val)
 {
-    Node* newNode = new Node(val);
+    Node* newnode = new Node(val);
     if(head == NULL)
     {
-        head = newNode;
-        tail = newNode;
+        head = newnode;
+        tail = newnode;
         return;
     }
-    tail->next = newNode;
-    newNode->prev = tail;
+
+    tail->next = newnode;
     tail = tail->next;
 }
 
@@ -48,7 +46,7 @@ int main()
     Node* tail2 = NULL;
 
     int val;
-    while(true)
+    while (true)
     {
         cin >> val;
         if(val == -1)
@@ -57,7 +55,7 @@ int main()
         }
         insert_at_tail(head1,tail1,val);
     }
-    while(true)
+    while (true)
     {
         cin >> val;
         if(val == -1)
@@ -66,8 +64,10 @@ int main()
         }
         insert_at_tail(head2,tail2,val);
     }
-    int size1,size2;
+
+    int size1;
     size_count(head1,size1);
+    int size2;
     size_count(head2,size2);
 
     if(size1 != size2)
@@ -75,6 +75,7 @@ int main()
         cout << "NO" << endl;
         return 0;
     }
+
     Node* tmp1 = head1;
     Node* tmp2 = head2;
     int flag = 1;
@@ -88,11 +89,12 @@ int main()
         tmp1 = tmp1->next;
         tmp2 = tmp2->next;
     }
+
     if(flag == 1)
     {
         cout << "YES" << endl;
     }
-    else
+    else 
     {
         cout << "NO" << endl;
     }
