@@ -35,7 +35,7 @@ void delete_at_any_pos(Node* head, int idx)
     }
     Node* deleteNode = tmp->next;
     tmp->next = tmp->next->next;
-    tmp->next->prev = tmp; 
+    tmp->next->prev = tmp;
     delete deleteNode;
 }
 

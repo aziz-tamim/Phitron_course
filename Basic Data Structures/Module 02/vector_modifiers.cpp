@@ -70,7 +70,7 @@
 // {
 //     vector<int> v = {1,2,3,2,5,2};
     
-//     // replace(v.begin(),v.end(),2,100);
+    // replace(v.begin(),v.end(),2,100);
 
 //     replace(v.begin(),v.end()-1,2,100);
 

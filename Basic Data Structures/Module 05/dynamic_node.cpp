@@ -24,5 +24,5 @@ int main()
     
     cout << head->val << endl;
     cout << head->next->val << endl;
-     return 0;
+    return 0;
 }

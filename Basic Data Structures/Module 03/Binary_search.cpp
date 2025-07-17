@@ -30,7 +30,6 @@ int main()
         else {
             l = mid + 1;
         }
-        
     }
 
     if(flag==1)
