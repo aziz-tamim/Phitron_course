@@ -30,7 +30,6 @@ int main()
     Node* slow = head;
     Node* fast = head;
     bool flag = false;
-
     while(fast != NULL && fast->next != NULL){
         slow = slow->next;
         fast = fast->next->next;
@@ -41,7 +40,7 @@ int main()
         }
     }
     if(flag == true)
-        cout << "cycle Detected";
+        cout << "Cycle Detected";
     else
         cout << "No Cycle";
     return 0;
