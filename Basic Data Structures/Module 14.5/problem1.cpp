@@ -87,13 +87,14 @@ int main()
 {
     myStack st1, st2;
     int n, m;
-    cin >> n >> m;
+    cin >> n;
     for(int i=0; i<n; i++)
     {
         int x;
         cin >> x;
         st1.push(x);
     }
+    cin >> m;
     for(int i=0; i<m; i++)
     {
         int x;
