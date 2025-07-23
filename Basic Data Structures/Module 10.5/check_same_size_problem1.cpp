@@ -1,3 +1,7 @@
+// Docs Link --> https://docs.google.com/document/d/13vRt1XJ7C_rOw-DXi2-ayTxAPM6zMM67/edit?tab=t.0
+
+// Question: Take two doubly linked lists as input and check if they are the same or not.
+
 #include<bits/stdc++.h>
 using namespace std;
 
