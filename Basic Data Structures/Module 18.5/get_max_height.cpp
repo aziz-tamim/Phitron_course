@@ -52,20 +52,20 @@ Node* input_tree()
     return root;
 }
 
-int cout_leaf_nodes(Node* root)
+int max_height(Node* root)
 {
-    if(root == NULL)    
+    if(root == NULL)
         return 0;
     if(root->left == NULL && root->right == NULL)
-        return 1;
-    int l = cout_leaf_nodes(root->left);
-    int r = cout_leaf_nodes(root->right);
-    return l+r;
+        return 0;
+    int  l = max_height(root->left);
+    int  r = max_height(root->right);
+    return max(l,r)+1;
 }
 
 int main()
 {
     Node* root = input_tree();
-    cout << cout_leaf_nodes(root);
+    cout << max_height(root);
     return 0;
 }
