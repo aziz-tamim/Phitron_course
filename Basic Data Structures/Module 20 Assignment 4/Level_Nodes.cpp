@@ -28,12 +28,12 @@ Node* input_tree()
     {
         Node* p = q.front();
         q.pop();
+
         int l,r;
         cin >> l >> r;
-        Node* myLeft, *myRight;
+        Node* myLeft,*myRight;
         if(l == -1) myLeft = NULL;
         else myLeft = new Node(l);
-
         if(r == -1) myRight = NULL;
         else myRight = new Node(r);
 
@@ -48,20 +48,50 @@ Node* input_tree()
     return root;
 }
 
-int sum_without_leaf(Node* root)
+void level_nodes(Node* root, int x)
 {
     if(root == NULL)
-        return 0;
-    if(root->left == NULL && root->right == NULL)
-        return 0;
-    int sum1 = sum_without_leaf(root->left);
-    int sum2 = sum_without_leaf(root->right);
-    return root->val + sum1 + sum2;
+    {
+        cout << "Invalid" << endl;
+        return;
+    }
+
+    vector<int> v;
+    queue<pair<Node*, int>> q;
+    q.push({root, 0});
+    while(!q.empty())
+    {
+        Node* f = q.front().first;
+        int sec = q.front().second;
+        q.pop();
+
+        if(sec == x)
+            v.push_back(f->val);
+        // if(sec > x) break; /////////////
+        if(f->left)
+            q.push({f->left, sec + 1});
+        if(f->right)
+            q.push({f->right, sec + 1});
+    }
+
+    if(v.empty())
+    {
+        cout << "Invalid" << endl;
+    }
+    else
+    {
+        for(int val : v)
+        {
+            cout << val << " ";
+        }
+    }
 }
 
 int main()
 {
     Node* root = input_tree();
-    cout << sum_without_leaf(root);
+    int level;
+    cin >> level;
+    level_nodes(root,level);
     return 0;
 }

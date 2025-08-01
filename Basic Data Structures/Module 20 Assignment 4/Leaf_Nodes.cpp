@@ -28,12 +28,12 @@ Node* input_tree()
     {
         Node* p = q.front();
         q.pop();
+
         int l,r;
         cin >> l >> r;
         Node* myLeft, *myRight;
         if(l == -1) myLeft = NULL;
         else myLeft = new Node(l);
-
         if(r == -1) myRight = NULL;
         else myRight = new Node(r);
 
@@ -48,20 +48,28 @@ Node* input_tree()
     return root;
 }
 
-int sum_without_leaf(Node* root)
+void sum_of_leaf_nodes(Node* root, vector<int>& v)
 {
     if(root == NULL)
-        return 0;
+        return;
     if(root->left == NULL && root->right == NULL)
-        return 0;
-    int sum1 = sum_without_leaf(root->left);
-    int sum2 = sum_without_leaf(root->right);
-    return root->val + sum1 + sum2;
+    {
+        v.push_back(root->val);
+        return;
+    }
+    sum_of_leaf_nodes(root->left, v);
+    sum_of_leaf_nodes(root->right, v);
 }
 
 int main()
 {
     Node* root = input_tree();
-    cout << sum_without_leaf(root);
+    vector<int> v;
+    sum_of_leaf_nodes(root, v);
+    sort(v.begin(), v.end(), greater<int>());
+    for(int val : v)
+    {
+        cout << val << " ";
+    }
     return 0;
 }
