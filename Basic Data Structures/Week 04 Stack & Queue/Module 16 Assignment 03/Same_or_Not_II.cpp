@@ -95,7 +95,7 @@ int main()
 {
     int n , m;
     cin >> n >> m;
-    int st[n], q[m];
+    int st[n], q[m]; // using array
     for(int i=0; i<n; i++)
     {
         cin >> st[i];
