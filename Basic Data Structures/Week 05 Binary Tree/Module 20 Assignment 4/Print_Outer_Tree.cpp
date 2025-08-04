@@ -136,16 +136,16 @@ int main()
     if(!root)
         return 0;
     
-    vector<int> leftouter, rightouter;
-    left_outertree(root->left, leftouter);
-    right_outertree(root->right, rightouter);
+    vector<int> lefNode, rightNode;
+    left_outertree(root->left, lefNode);
+    right_outertree(root->right, rightNode);
 
-    for(int val : leftouter)
+    for(int val : lefNode)
     {
         cout << val << " ";
     }
     cout << root->val << " ";
-    for(int val : rightouter)
+    for(int val : rightNode)
     {
         cout << val << " ";
     }
