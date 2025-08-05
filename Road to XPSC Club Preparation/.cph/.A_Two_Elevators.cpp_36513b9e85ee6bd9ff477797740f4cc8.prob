@@ -1,0 +1,1 @@
+{"name":"Local: A_Two_Elevators","url":"d:\\Phitron\\Road to XPSC Club Preparation\\A_Two_Elevators.cpp","tests":[{"id":1754364723299,"input":"3\n1 2 3\n3 1 2\n3 2 1","output":"1\n3\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Road to XPSC Club Preparation\\A_Two_Elevators.cpp","group":"local","local":true}
