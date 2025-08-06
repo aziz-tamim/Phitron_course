@@ -1,0 +1,4 @@
+hamim 0
+ramim 500
+shamim 50
+tamim 2
