@@ -19,7 +19,7 @@ int main()
     if(s.count(4))
         cout << "Ache";
     else
-        cout << "Nai"; 
+        cout << "Nai";
 
     return 0;
 }
