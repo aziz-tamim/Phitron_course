@@ -29,35 +29,31 @@
 // }
 
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-
     int t;
     cin >> t;
-    // cin.ignore();
-    while (t--)
+    while(t--)
     {
-        int x, y;
+        int x,y;
         cin >> x >> y;
-
-        int res = (y + 1) / 2;
-
-        int cell = res * 15;
-        int ccupied = y * 4;
-
-        x -= (cell - ccupied);
-
-        if (x < 0)
+        int screen = y/2;
+        int baki = screen * 7;
+        if(y%2 != 0)
         {
-            x = 0;
+            screen++;
+            baki += 11;
         }
-
-        res += (x + 14) / 15;
-
-        cout << res << endl;
+        if(x > baki)
+        {
+            x -= baki;
+            screen += x/15;
+            if(x%15 != 0)
+                screen++;
+        }
+        cout << screen << endl;
     }
-
     return 0;
 }
