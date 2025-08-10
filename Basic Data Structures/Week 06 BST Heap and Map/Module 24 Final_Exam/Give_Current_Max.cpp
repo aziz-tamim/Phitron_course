@@ -13,7 +13,6 @@ class Student
             this->roll = roll;
             this->marks = marks;
         }
-
 };
 
 class cmp

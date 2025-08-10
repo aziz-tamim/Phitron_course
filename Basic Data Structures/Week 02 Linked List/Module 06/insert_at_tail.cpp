@@ -38,6 +38,7 @@ void print_linked_list(Node* head)
         tmp = tmp->next;
     }
 }
+
 int main()
 {
     // Node* head = NULL;
