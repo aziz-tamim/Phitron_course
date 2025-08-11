@@ -1,3 +1,5 @@
+// docs link --> https://docs.google.com/document/d/1KJAVqqr7pqeMR0z5ATAXmKbIQo2JazHf/edit?tab=t.0
+
 // Question: Create a singly linked list and check if the linked list contains any duplicate value. You can assume that the maximum value will be 100.
 
 // #include<bits/stdc++.h>

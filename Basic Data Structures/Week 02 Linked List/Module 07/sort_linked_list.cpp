@@ -39,9 +39,9 @@ void print_linked_list(Node* head)
 
 void sort_linked_list(Node* &head)
 {
-    for(Node* i = head; i->next != NULL;i = i->next)
+    for(Node* i = head; i->next != NULL; i= i->next)
     {
-        for(Node* j = i->next; j != NULL;j = j->next)
+        for(Node* j=i->next; j!= NULL; j= j->next)
         {
             if(i->val > j->val)
             {

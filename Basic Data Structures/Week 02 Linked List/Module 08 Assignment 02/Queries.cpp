@@ -1,3 +1,5 @@
+// problem link -> https://www.hackerrank.com/contests/assignment-02-a-basic-data-structures-a-batch-07/challenges
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -84,38 +86,38 @@ void delete_at_index(Node* &head, Node* &tail, int index)
 
 void print_linked_list(Node* head)
 {
-    Node* tmp = head;
-    while(tmp != NULL)
-    {
-        cout << tmp->val << " ";
-        tmp = tmp->next;
+        Node* tmp = head;
+        while(tmp != NULL)
+        {
+            cout << tmp->val << " ";
+            tmp = tmp->next;
+        }
+        cout << endl;
     }
-    cout << endl;
-}
 
-int main()
-{
-    Node* head = NULL;
-    Node* tail = NULL;
-    int q;
-    cin >> q;
-    while(q--)
+    int main()
     {
-        int idx, val;
-        cin>> idx >> val;
-        if(idx == 0)
+        Node* head = NULL;
+        Node* tail = NULL;
+        int q;
+        cin >> q;
+        while(q--)
         {
-            insert_at_head(head, tail, val);
+            int idx, val;
+            cin>> idx >> val;
+            if(idx == 0)
+            {
+                insert_at_head(head, tail, val);
+            }
+            else if(idx == 1)
+            {
+                insert_at_tail(head, tail, val);
+            }
+            else if(idx == 2)
+            {
+                delete_at_index(head, tail, val);
+            }
+            print_linked_list(head);
         }
-        else if(idx == 1)
-        {
-            insert_at_tail(head, tail, val);
-        }
-        else if(idx == 2)
-        {
-            delete_at_index(head, tail, val);
-        }
-        print_linked_list(head);
+        return 0;
     }
-    return 0;
-}

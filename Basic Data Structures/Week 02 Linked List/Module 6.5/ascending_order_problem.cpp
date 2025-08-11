@@ -1,3 +1,5 @@
+// docs link --> https://docs.google.com/document/d/1KJAVqqr7pqeMR0z5ATAXmKbIQo2JazHf/edit?tab=t.0
+
 // #include<bits/stdc++.h>
 // using namespace std;
 

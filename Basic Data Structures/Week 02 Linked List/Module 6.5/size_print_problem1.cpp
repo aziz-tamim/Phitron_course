@@ -1,5 +1,6 @@
-// Question: Create a singly linked list and print the size of the linked list.
+// docs link --> https://docs.google.com/document/d/1KJAVqqr7pqeMR0z5ATAXmKbIQo2JazHf/edit?tab=t.0
 
+// Question: Create a singly linked list and print the size of the linked list.
 
 // #include<bits/stdc++.h>
 // using namespace std;

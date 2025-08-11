@@ -1,3 +1,5 @@
+// docs link --> https://docs.google.com/document/d/1KJAVqqr7pqeMR0z5ATAXmKbIQo2JazHf/edit?tab=t.0
+
 // Question: Create a singly linked list and print the middle element. If there are multiple values in the middle print both.
 
 

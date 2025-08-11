@@ -39,6 +39,8 @@ void delete_at_any_pos(Node* head, int idx)
     delete deleteNode;
 }
 
+
+
 int main()
 {
     Node* head = new Node(10);
