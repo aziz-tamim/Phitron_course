@@ -6,8 +6,3 @@
 // Problem 02
 // Minimum String Length After Removing Substrings --> https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/
 
-// Problem 03
-// Maximum Nesting Depth of the Parentheses Solution --> https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
-
-// Problem 04
-// Minimum String Length After Removing Substrings Solution --> https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/

@@ -41,7 +41,7 @@ void insert_at_tail(Node* &head, Node* &tail, int val)
  
 void reverse_doubly(Node* head, Node* tail)
 {
-    for(Node*i=head,*j=tail; i!=j && i->prev!=j; i=i->next, j=j->prev)
+    for(Node* i=head, *j = tail; i!=j && i->prev!=j; i=i->next, j=j->prev)
     {
         swap(i->val,j->val);
     }
