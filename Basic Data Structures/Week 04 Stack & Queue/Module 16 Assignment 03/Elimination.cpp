@@ -1,21 +1,21 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     int t;
     cin >> t;
-    while(t--)
+    while (t--)
     {
         string str;
         cin >> str;
         stack<char> st;
-        for(char c : str)
+        for (char c : str)
         {
-            if(st.empty())
+            if (st.empty())
             {
                 st.push(c);
             }
-            else if(st.top() == '0' && c == '1')
+            else if (st.top() == '0' && c == '1')
             {
                 st.pop();
             }
@@ -24,7 +24,7 @@ int main()
                 st.push(c);
             }
         }
-        if(st.empty())
+        if (st.empty())
             cout << "YES" << endl;
         else
             cout << "NO" << endl;
