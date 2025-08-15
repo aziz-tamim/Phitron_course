@@ -4,7 +4,7 @@ using namespace std;
 class myQueue
 {
     public:
-    list<int>l;
+    list<int> l;
 
     void push(int val) // O(1)
     {
