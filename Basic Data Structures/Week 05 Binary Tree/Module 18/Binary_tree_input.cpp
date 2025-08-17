@@ -29,8 +29,9 @@ Node* input_tree()
         // 1. ber kore ana
         Node* p = q.front();
         q.pop();
+
         // 2. oi node ke niye kaj korbo
-        int l,r;
+        int l, r;
         cin >> l >> r;
         Node* myLeft, *myRight;
         if(l == -1) myLeft = NULL;
@@ -65,9 +66,8 @@ void level_order(Node* root)
         // 1 ber kore ana
         Node* f = q.front();
         q.pop();
-        // 2 oi node ke niye kaj kora
+        // 2. oi node ke niye kaj kora
         cout << f->val << " ";
-        // 3 children push kora
         if(f->left)
             q.push(f->left);
         if(f->right)

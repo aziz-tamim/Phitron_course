@@ -20,6 +20,5 @@ int main()
         cout << "Ache";
     else
         cout << "Nai";
-
     return 0;
 }
