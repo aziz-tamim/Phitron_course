@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n,e;
+    int n,e; // node edge input
     cin >> n >> e;
     vector<int> adj_list[n];
 

@@ -26,7 +26,7 @@ void bfs(int src)
 
 int main()
 {
-    int n,e;
+    int n,e; // node edge input
     cin >> n >> e;
     while(e--)
     {

@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n,e;
+    int n,e; // node edge input
     cin >> n >> e;
     int adj_mat [n][n];
     // for(int i=0; i<n; i++)
