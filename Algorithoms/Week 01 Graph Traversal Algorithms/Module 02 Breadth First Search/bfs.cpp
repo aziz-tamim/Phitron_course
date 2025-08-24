@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> adj_list[1005];
@@ -8,7 +8,7 @@ void bfs(int src)
     queue<int> q;
     q.push(src);
     vis[src] = true;
-    while(!q.empty())
+    while (!q.empty())
     {
         // queue theke ber kore ana
         int par = q.front();
@@ -16,9 +16,9 @@ void bfs(int src)
         // oi node ke niye kaj kora
         cout << par << " ";
         // children gulo push kora
-        for(int child : adj_list[par])
+        for (int child : adj_list[par])
         {
-            if(vis[child] == false)
+            if (vis[child] == false)
             {
                 q.push(child);
                 vis[child] = true;
@@ -29,16 +29,16 @@ void bfs(int src)
 
 int main()
 {
-    int n,e; // node edge input
+    int n, e; // node edge input
     cin >> n >> e;
-    while(e--)
+    while (e--)
     {
-        int a,b;
+        int a, b;
         cin >> a >> b;
         adj_list[a].push_back(b);
         adj_list[b].push_back(a);
     }
-    memset(vis,false,sizeof(vis));
+    memset(vis, false, sizeof(vis));
     bfs(0);
     return 0;
 }
