@@ -1,0 +1,1 @@
+{"name":"Local: A_Dr_TC","url":"d:\\Phitron\\Road to XPSC Club Preparation\\A_Dr_TC.cpp","tests":[{"id":1756181546067,"input":"5\n3\n101\n1\n1\n5\n00000\n2\n11\n3\n010","output":"5\n0\n5\n2\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Road to XPSC Club Preparation\\A_Dr_TC.cpp","group":"local","local":true}
