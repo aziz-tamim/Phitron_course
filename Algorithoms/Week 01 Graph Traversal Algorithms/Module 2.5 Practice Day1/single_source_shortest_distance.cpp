@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 vector<int> adj_list[1005];
 bool vis[1005];
 int level[1005];
@@ -29,7 +28,7 @@ void bfs(int src)
 
 int main()
 {
-    int n,e; // node edge input // node edge input;
+    int n,e; // node edge input
     cin >> n >> e;
     while(e--)
     {

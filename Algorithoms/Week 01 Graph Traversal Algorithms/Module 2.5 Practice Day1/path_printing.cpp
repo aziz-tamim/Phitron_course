@@ -31,7 +31,7 @@ void bfs(int src)
 
 int main()
 {
-    int n,e; // node edge input // node edge input;
+    int n,e; // node edge input
     cin >> n >> e;
     while(e--)
     {
@@ -59,6 +59,5 @@ int main()
     {
         cout << x << " ";
     }
-
     return 0;
 }

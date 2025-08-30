@@ -21,7 +21,7 @@ void bfs(int src)
             {
                 q.push(child);
                 vis[child] = true;
-                level[child] = level[par]+1;
+                level[child] = level[par] + 1;
                 parent[child] = par;
             }
         }
@@ -30,7 +30,7 @@ void bfs(int src)
 
 int main()
 {
-    int n,e; // node edge input // node edge input;
+    int n,e; // node edge input
     cin >> n >> e;
     while(e--)
     {
