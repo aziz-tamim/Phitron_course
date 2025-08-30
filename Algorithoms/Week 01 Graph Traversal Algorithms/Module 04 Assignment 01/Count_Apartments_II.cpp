@@ -27,7 +27,7 @@ void dfs(int si, int sj)
 
 int main()
 {
-    cin >> n >>m;
+    cin >> n >> m;
     for(int i=0; i<n; i++)
         for(int j=0; j<m; j++)
             cin >> grid[i][j];

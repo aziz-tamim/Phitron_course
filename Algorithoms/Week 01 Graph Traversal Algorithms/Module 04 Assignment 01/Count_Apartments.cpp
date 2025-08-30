@@ -17,7 +17,7 @@ void dfs(int si, int sj)
     for(int i=0; i<4; i++)
     {
         int ci = si + d[i].first;
-        int cj = sj+ d[i].second;
+        int cj = sj + d[i].second;
         if(valid(ci,cj) == true && !vis[ci][cj] && grid[ci][cj] == '.')
         {
             dfs(ci,cj);
@@ -44,7 +44,7 @@ int main()
                 dfs(i,j);
             }
         }
-    }
+    } 
 
     cout << cnt << endl;
     return 0;

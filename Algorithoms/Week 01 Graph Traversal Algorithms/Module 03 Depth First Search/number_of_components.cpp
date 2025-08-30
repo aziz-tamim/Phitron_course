@@ -5,16 +5,15 @@ bool vis[1005];
 
 void dfs(int src)
 {
-    // base case
     vis[src] = true;
     for(int child : adj_list[src])
-        if(vis[child] == false)
+        if(!vis[child])
             dfs(child);
 }
 
 int main()
 {
-    int n,e; // node edge input
+    int n,e;
     cin >> n >> e;
     while(e--)
     {
@@ -25,12 +24,12 @@ int main()
     }
     memset(vis,false,sizeof(vis));
     int cnt = 0;
-    for(int i=0; i<n; i++)
+    for(int i=0;i<n;i++)
     {
-        if(vis[i] == false)
+        if(vis[i]==false)
         {
             dfs(i);
-            cnt ++;
+            cnt++;
         }
     }
     cout << cnt << endl;

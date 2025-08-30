@@ -28,7 +28,6 @@ int main()
         adj_list[b].push_back(a);
     }
     vector<int> cmpo;
-    
     for(int i=0; i<n; i++)
     {
         if(vis[i] == false)
