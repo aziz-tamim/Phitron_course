@@ -40,6 +40,7 @@ int bfs(int si, int sj)
     }
     return -1;
 }
+
 int main()
 {
     int t;
@@ -49,7 +50,6 @@ int main()
         cin >> n >> m;
         int si, sj;
         cin >> si >> sj >> ei >> ej;
-
         memset(vis, false, sizeof(vis));
         memset(level, -1, sizeof(level));
 
