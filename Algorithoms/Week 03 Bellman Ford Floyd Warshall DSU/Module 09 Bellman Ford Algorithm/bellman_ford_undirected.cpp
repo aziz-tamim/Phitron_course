@@ -30,28 +30,6 @@ void bellman_ford()
         }
     }
     
-    bool cycle = false;
-    
-    for(auto ed : edge_list)
-    {
-            int a,b,c;
-            a = ed.a;
-            b = ed.b;
-            c = ed.c;
-            if(dis[a] != INT_MAX && dis[a]+c<dis[b])
-            {
-                cycle = true;
-                break;
-            }
-    }
-    if(cycle)
-        cout << "Negative Cycle detected" << endl;
-    else
-    {
-        for(int i=0; i<n; i++)
-            cout << i << " -> " << dis[i] << endl;
-    }
-        // cout << "No negative weighted Cycle" << endl;
 }
 
 int main()
@@ -62,6 +40,7 @@ int main()
         int a,b,c;
         cin >> a >> b >> c;
         edge_list.push_back(Edge(a,b,c));
+        edge_list.push_back(Edge(b,a,c));  // undirected graph
     }
 
     for(int i=0; i<n; i++)
@@ -69,5 +48,9 @@ int main()
     dis[0] = 0;
 
     bellman_ford();
+    for(int i=0; i<n; i++)
+    {
+        cout << i << " -> " << dis[i] << endl;
+    }
     return 0;
 }
