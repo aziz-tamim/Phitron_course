@@ -36,7 +36,7 @@ int main()
     }
     while(q--)
     {
-        int s,d;
+        long long int s,d;
         cin >> s >> d;
         if(adj_mat[s][d] == LLONG_MAX)
             cout << -1 << endl;
