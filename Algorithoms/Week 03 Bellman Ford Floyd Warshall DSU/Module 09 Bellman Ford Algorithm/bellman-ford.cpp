@@ -31,14 +31,14 @@ void bellman_ford()
     }
     
     bool cycle = false;
-    
+
     for(auto ed : edge_list)
     {
         int a,b,c;
         a = ed.a;
         b = ed.b;
         c = ed.c;
-        if(dis[a] != INT_MAX && dis[a]+c<dis[b])
+        if(dis[a] != INT_MAX && dis[a] + c < dis[b])
         {
             cycle = true;
             break;
