@@ -2,7 +2,8 @@
 using namespace std;
 int par[1005];
 int group_size[1005];
-int find(int node) // O(logN)
+
+int find(int node)
 {
     if(par[node] == -1)
         return node;
@@ -10,7 +11,8 @@ int find(int node) // O(logN)
     par[node] = leader;
     return leader;
 }
-void dsa_union(int node1, int node2)
+
+void dsu_union(int node1, int node2)
 {
     int leader1 = find(node1);
     int leader2 = find(node2);
@@ -25,15 +27,29 @@ void dsa_union(int node1, int node2)
         group_size[leader2] += group_size[leader1];
     }
 }
+
 int main()
 {
     memset(par,-1,sizeof(par));
     memset(group_size,1,sizeof(group_size));
-    dsa_union(1,2);
-    dsa_union(2,0);
-    dsa_union(3,1);
 
-    for(int i=0; i<6; i++)
-        cout << i << " -> " << par[i] << endl;
+    int n,e;
+    cin >> n >> e;
+    bool cycle = false;
+    while(e--)
+    {
+        int a,b;
+        cin >> a >> b;
+        int leaderA = find(a);
+        int leaderB = find(b);
+        if(leaderA == leaderB)
+            cycle = true;
+        else
+            dsu_union(a,b);
+    }
+    if(cycle)
+        cout << "Cycle detected" << endl;
+    else
+        cout << "No cycle" << endl;
     return 0;
 }
