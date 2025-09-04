@@ -1,0 +1,2 @@
+// Disjoint set (Union-Find)
+// problem link --> https://www.geeksforgeeks.org/problems/disjoint-set-union-find/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab
