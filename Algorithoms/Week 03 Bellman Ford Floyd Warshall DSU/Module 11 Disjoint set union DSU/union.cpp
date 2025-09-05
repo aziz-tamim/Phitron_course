@@ -10,7 +10,7 @@ int find(int node) // O(logN)
     par[node] = leader;
     return leader;
 }
-void dsa_union(int node1, int node2)
+void dsu_union(int node1, int node2)
 {
     int leader1 = find(node1);
     int leader2 = find(node2);
@@ -29,9 +29,9 @@ int main()
 {
     memset(par,-1,sizeof(par));
     memset(group_size,1,sizeof(group_size));
-    dsa_union(1,2);
-    dsa_union(2,0);
-    dsa_union(3,1);
+    dsu_union(1,2);
+    dsu_union(2,0);
+    dsu_union(3,1);
 
     for(int i=0; i<6; i++)
         cout << i << " -> " << par[i] << endl;

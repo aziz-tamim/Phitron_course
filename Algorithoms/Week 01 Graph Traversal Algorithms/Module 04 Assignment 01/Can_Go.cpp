@@ -3,7 +3,6 @@ using namespace std;
 char grid[1005][1005];
 bool vis[1005][1005];
 vector<pair<int,int>> d = {{-1,0},{1,0},{0,-1},{0,1}};
-
 int n,m;
 bool valid(int i,int j)
 {

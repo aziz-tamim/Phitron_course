@@ -11,7 +11,6 @@ void dfs(int src)
     pathvis[src] = true;
     for(int child : adj_list[src])
     {
-
         if(vis[child] && pathvis[child])
             cycle = true;
         if(!vis[child])
