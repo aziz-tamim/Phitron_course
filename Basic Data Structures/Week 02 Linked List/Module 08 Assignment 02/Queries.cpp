@@ -95,29 +95,29 @@ void print_linked_list(Node* head)
         cout << endl;
     }
 
-    int main()
+int main()
+{
+    Node* head = NULL;
+    Node* tail = NULL;
+    int q;
+    cin >> q;
+    while(q--)
     {
-        Node* head = NULL;
-        Node* tail = NULL;
-        int q;
-        cin >> q;
-        while(q--)
+        int idx, val;
+        cin>> idx >> val;
+        if(idx == 0)
         {
-            int idx, val;
-            cin>> idx >> val;
-            if(idx == 0)
-            {
-                insert_at_head(head, tail, val);
-            }
-            else if(idx == 1)
-            {
-                insert_at_tail(head, tail, val);
-            }
-            else if(idx == 2)
-            {
-                delete_at_index(head, tail, val);
-            }
-            print_linked_list(head);
+            insert_at_head(head, tail, val);
         }
-        return 0;
+        else if(idx == 1)
+        {
+            insert_at_tail(head, tail, val);
+        }
+        else if(idx == 2)
+        {
+            delete_at_index(head, tail, val);
+        }
+        print_linked_list(head);
     }
+    return 0;
+}
