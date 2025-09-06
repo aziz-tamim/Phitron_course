@@ -54,7 +54,7 @@ Node* input_tree()
 
 int cout_leaf_nodes(Node* root)
 {
-    if(root == NULL)    
+    if(root == NULL)
         return 0;
     if(root->left == NULL && root->right == NULL)
         return 1;
