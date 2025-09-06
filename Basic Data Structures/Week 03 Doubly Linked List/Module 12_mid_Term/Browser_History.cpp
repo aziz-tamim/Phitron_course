@@ -110,6 +110,5 @@ int main()
             prev(curr);
         }
     }
-
     return 0;
 }
