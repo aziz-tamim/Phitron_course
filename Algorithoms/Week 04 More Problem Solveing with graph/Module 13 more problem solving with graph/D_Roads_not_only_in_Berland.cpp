@@ -1,3 +1,5 @@
+// problem link --> https://codeforces.com/problemset/problem/25/D
+
 #include<bits/stdc++.h>
 using namespace std;
 int par[1005];
