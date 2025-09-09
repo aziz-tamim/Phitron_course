@@ -1,11 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-int fibonacci(int n)
+int fibonacci(int n) // O(2^n)
 {
     if(n==0 || n==1)
         return n;
-    if(n==1)
-        return 1;
     return fibonacci(n-1) + fibonacci(n-2);
 }
 int main()
