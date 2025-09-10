@@ -1,3 +1,4 @@
+// problem link --> https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/D
 #include<bits/stdc++.h>
 using namespace std;
 void print_dig(long long n)
