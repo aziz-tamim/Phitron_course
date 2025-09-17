@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -54,9 +54,9 @@ int main()
     //     cout << val << endl;
     // }
 
-    list<int> l = {10,20,30,40,20,20};
-    auto it = find(l.begin(), l.end(),20);
-    if(it == l.end())
+    list<int> l = {10, 20, 30, 40, 20, 20};
+    auto it = find(l.begin(), l.end(), 20);
+    if (it == l.end())
     {
         cout << "Not found" << endl;
     }
@@ -64,7 +64,7 @@ int main()
     {
         cout << "Found" << endl;
     }
-    for(int val : l)
+    for (int val : l)
     {
         cout << val << endl;
     }
