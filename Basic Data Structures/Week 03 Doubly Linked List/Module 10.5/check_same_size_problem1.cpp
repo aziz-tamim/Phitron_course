@@ -2,14 +2,14 @@
 
 // Question: Take two doubly linked lists as input and check if they are the same or not.
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Node
 {
-    public:
-        int val;
-        Node* next;
+public:
+    int val;
+    Node *next;
     Node(int val)
     {
         this->val = val;
@@ -17,10 +17,10 @@ class Node
     }
 };
 
-void insert_at_tail(Node* &head, Node* &tail, int val)
+void insert_at_tail(Node *&head, Node *&tail, int val)
 {
-    Node* newnode = new Node(val);
-    if(head == NULL)
+    Node *newnode = new Node(val);
+    if (head == NULL)
     {
         head = newnode;
         tail = newnode;
@@ -31,11 +31,11 @@ void insert_at_tail(Node* &head, Node* &tail, int val)
     tail = tail->next;
 }
 
-void size_count(Node* head, int &cnt)
+void size_count(Node *head, int &cnt)
 {
     cnt = 0;
-    Node* tmp = head;
-    while(tmp != NULL)
+    Node *tmp = head;
+    while (tmp != NULL)
     {
         cnt++;
         tmp = tmp->next;
@@ -44,48 +44,48 @@ void size_count(Node* head, int &cnt)
 
 int main()
 {
-    Node* head1 = NULL;
-    Node* tail1 = NULL;
-    Node* head2 = NULL;
-    Node* tail2 = NULL;
+    Node *head1 = NULL;
+    Node *tail1 = NULL;
+    Node *head2 = NULL;
+    Node *tail2 = NULL;
 
     int val;
     while (true)
     {
         cin >> val;
-        if(val == -1)
+        if (val == -1)
         {
             break;
         }
-        insert_at_tail(head1,tail1,val);
+        insert_at_tail(head1, tail1, val);
     }
     while (true)
     {
         cin >> val;
-        if(val == -1)
+        if (val == -1)
         {
             break;
         }
-        insert_at_tail(head2,tail2,val);
+        insert_at_tail(head2, tail2, val);
     }
 
     int size1;
-    size_count(head1,size1);
+    size_count(head1, size1);
     int size2;
-    size_count(head2,size2);
+    size_count(head2, size2);
 
-    if(size1 != size2)
+    if (size1 != size2)
     {
         cout << "NO" << endl;
         return 0;
     }
 
-    Node* tmp1 = head1;
-    Node* tmp2 = head2;
+    Node *tmp1 = head1;
+    Node *tmp2 = head2;
     int flag = 1;
-    while(tmp1 != NULL && tmp2 != NULL)
+    while (tmp1 != NULL && tmp2 != NULL)
     {
-        if(tmp1->val != tmp2->val)
+        if (tmp1->val != tmp2->val)
         {
             flag = 0;
             break;
@@ -94,11 +94,11 @@ int main()
         tmp2 = tmp2->next;
     }
 
-    if(flag == 1)
+    if (flag == 1)
     {
         cout << "YES" << endl;
     }
-    else 
+    else
     {
         cout << "NO" << endl;
     }
