@@ -1,6 +1,5 @@
 // #include<bits/stdc++.h>
 // using namespace std;
-
 // class Mystack{
 //     public:
 //         list<int>l;

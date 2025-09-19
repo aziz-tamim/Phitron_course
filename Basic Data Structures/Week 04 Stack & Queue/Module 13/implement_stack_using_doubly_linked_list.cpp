@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 class Node
 {
-    public:
-        int val;
-        Node* next;
-        Node* prev;
+public:
+    int val;
+    Node* next;
+    Node* prev;
     Node(int val)
     {
         this->val = val;
@@ -16,53 +16,53 @@ class Node
 
 class myStack
 {
-    public:
-        Node* head = NULL;
-        Node* tail = NULL;
-        int sz = 0;
+public:
+    Node* head = NULL;
+    Node* tail = NULL;
+    int sz = 0;
 
-        void push(int val)  //O(1)
+    void push(int val) // O(1)
+    {
+        sz++;
+        Node* newNode = new Node(val);
+        if (head == NULL)
         {
-            sz++;
-            Node* newNode = new Node(val);
-            if(head == NULL)
-            {
-                head = newNode;
-                tail = newNode;
-                return;
-            }
-            tail->next = newNode;
-            newNode->prev = tail;
+            head = newNode;
             tail = newNode;
+            return;
         }
-        void pop()  // O(1)
+        tail->next = newNode;
+        newNode->prev = tail;
+        tail = newNode;
+    }
+    void pop() // O(1)
+    {
+        sz--;
+        Node* deletenode = tail;
+        tail = tail->prev;
+        delete deletenode;
+        if (tail == NULL)
         {
-            sz--;
-            Node* deletenode = tail;
-            tail = tail->prev;
-            delete deletenode;
-            if(tail == NULL)
-            {
-                head = NULL;
-                return;
-            }
-            tail->next = NULL;
+            head = NULL;
+            return;
         }
-        int top()  // O(1)
-        {
-            return tail->val;
-        }
-        int size()  // O(1)
-        {
-            return sz;
-        }
-        bool empty()  // O(1)
-        {
-            if(head == NULL)
-                return true;
-            else 
-                return false;
-        }
+        tail->next = NULL;
+    }
+    int top() // O(1)
+    {
+        return tail->val;
+    }
+    int size() // O(1)
+    {
+        return sz;
+    }
+    bool empty() // O(1)
+    {
+        if (head == NULL)
+            return true;
+        else
+            return false;
+    }
 };
 
 int main()
@@ -70,7 +70,7 @@ int main()
     myStack st;
     int n;
     cin >> n;
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
         int x;
         cin >> x;

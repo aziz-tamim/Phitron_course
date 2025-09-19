@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Node
 {
-    public:
-        int val;
-        Node* next;
+public:
+    int val;
+    Node *next;
     Node(int val)
     {
         this->val = val;
@@ -15,15 +15,15 @@ class Node
 
 class myQueue
 {
-    public:
-    Node* head = NULL;
-    Node* tail = NULL;
+public:
+    Node *head = NULL;
+    Node *tail = NULL;
     int sz = 0;
     void push(int val) // O(1)
     {
         sz++;
-        Node* newnode = new Node(val);
-        if(head == NULL)
+        Node *newnode = new Node(val);
+        if (head == NULL)
         {
             head = newnode;
             tail = newnode;
@@ -31,18 +31,18 @@ class myQueue
         tail->next = newnode;
         tail = newnode;
     }
-    void pop()  // O(1)
+    void pop() // O(1)
     {
         sz--;
-        Node* deleteNode = head;
+        Node *deleteNode = head;
         head = head->next;
         delete deleteNode;
-        if(head == NULL)
+        if (head == NULL)
         {
             tail = NULL;
         }
     }
-    int front()  // O(1)
+    int front() // O(1)
     {
         return head->val;
     }
@@ -56,7 +56,7 @@ class myQueue
     }
     bool empty()
     {
-        if(head == NULL)
+        if (head == NULL)
         {
             return true;
         }
@@ -72,13 +72,13 @@ int main()
     myQueue q;
     int n;
     cin >> n;
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
         int val;
         cin >> val;
         q.push(val);
     }
-    while(!q.empty())
+    while (!q.empty())
     {
         cout << q.front() << endl;
         q.pop();

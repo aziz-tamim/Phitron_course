@@ -5,7 +5,6 @@ class myStack
 {
 public:
     vector<int> v;
-
     void push(int val)
     {
         v.push_back(val);
