@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 class Node
 {
     public:
@@ -19,9 +18,9 @@ void inorder(Node* root)
 {
     if(root == NULL)
         return;
-    inorder(root->left); // left
-    cout << root->val << " ";  // root
-    inorder(root->right); // right
+    inorder(root->left);    // left
+    cout << root->val << " ";   // root
+    inorder(root->right);   // right
 }
 
 int main()
