@@ -3,7 +3,7 @@ using namespace std;
 vector<int> adj_list[1005];
 bool vis[1005];
 
-void dfs(int src)
+void dfs(int src) // drefth first search
 {
     // base case
     cout << src << " ";
