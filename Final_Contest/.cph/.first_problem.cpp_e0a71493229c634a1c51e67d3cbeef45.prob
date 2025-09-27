@@ -1,0 +1,1 @@
+{"name":"Local: first_problem","url":"d:\\Phitron_course_practice\\Final_Contest\\first_problem.cpp","tests":[{"id":1758899033198,"input":"1729","output":"Lucky"},{"id":1758899381949,"input":"12345","output":"Not Lucky"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron_course_practice\\Final_Contest\\first_problem.cpp","group":"local","local":true}
