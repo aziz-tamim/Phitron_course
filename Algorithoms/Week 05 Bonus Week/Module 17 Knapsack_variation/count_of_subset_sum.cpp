@@ -6,7 +6,7 @@ int subset_sum(int i, int sum) // O(n*sum)
 {
     if(i<0)
     {
-        if(sum==0) return 1;
+        if(sum == 0) return 1;
         else return 0;
     }
     if(dp[i][sum] != -1)
