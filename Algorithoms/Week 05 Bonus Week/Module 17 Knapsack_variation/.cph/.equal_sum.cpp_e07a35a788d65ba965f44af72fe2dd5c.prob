@@ -1,0 +1,1 @@
+{"name":"Local: equal_sum","url":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 17 Knapsack_variation\\equal_sum.cpp","tests":[{"id":1759126324973,"input":"4\n1 2 4 7","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 17 Knapsack_variation\\equal_sum.cpp","group":"local","local":true}
