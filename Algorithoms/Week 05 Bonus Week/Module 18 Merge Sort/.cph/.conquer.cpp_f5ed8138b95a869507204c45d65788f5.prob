@@ -1,0 +1,1 @@
+{"name":"Local: conquer","url":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 18 Merge Sort\\conquer.cpp","tests":[{"id":1759293621549,"input":"3\n2 9 13\n4\n3 5 7 8","output":"2 3 5 7 8 9 13 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 18 Merge Sort\\conquer.cpp","group":"local","local":true}
