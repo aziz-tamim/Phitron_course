@@ -1,0 +1,1 @@
+{"name":"Local: lcs","url":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 19 LCS and MST\\lcs.cpp","tests":[{"id":1759308874885,"input":"ABCD\nAKBC","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Algorithoms\\Week 05 Bonus Week\\Module 19 LCS and MST\\lcs.cpp","group":"local","local":true}
