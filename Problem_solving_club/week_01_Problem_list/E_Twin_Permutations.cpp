@@ -34,24 +34,21 @@
 using namespace std;
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t;
+    long long int t;
     cin >> t;
     while (t--)
     {
-        int n;
+        long long int n;
         cin >> n;
-        for (int i = 0; i < n; i++)
+        for (long long int i = 0; i < n; i++)
         {
-            int val;
+            long long int val;
             cin >> val;
 
-            int purm = n + 1 - val;
-            cout << purm << " ";
+            long long int ans = n + 1 - val;
+            cout << ans << ' ';
         }
         cout << "\n";
     }
-
     return 0;
 }

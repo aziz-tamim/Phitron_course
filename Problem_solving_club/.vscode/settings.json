@@ -13,6 +13,8 @@
         "regex": "cpp",
         "valarray": "cpp",
         "iostream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp"
     }
 }
