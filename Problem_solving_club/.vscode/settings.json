@@ -15,6 +15,9 @@
         "iostream": "cpp",
         "random": "cpp",
         "bitset": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "sstream": "cpp",
+        "iomanip": "cpp",
+        "ostream": "cpp"
     }
 }
