@@ -123,7 +123,7 @@ int main()
     auto mn = min_element(v.begin(), v.end());
     cout << *mn << "\n";
     auto mx = max_element(v.begin(),v.end());
-    cout << *mx << "\n";
+    int maxElementPosition = mx - v.begin();
+    cout << maxElementPosition << '\n';
     return 0;
-
 }
