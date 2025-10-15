@@ -19,9 +19,7 @@ int main()
             now_orginal.erase(old);
         }
         else
-        {
             orginal_n = old;
-        }
 
         now_orginal[new_n] = orginal_n;
     }
