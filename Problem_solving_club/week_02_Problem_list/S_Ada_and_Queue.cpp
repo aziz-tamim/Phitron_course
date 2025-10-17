@@ -7,7 +7,7 @@ int main()
     int t;
     cin >> t;
     deque<int> dq;
-    bool rev = false;
+    bool reve = false;
     while(t--)
     {
         string cmd;
@@ -16,7 +16,7 @@ int main()
         {
             int n;
             cin >> n;
-            if(rev == false)
+            if(reve == false)
                 dq.push_back(n);
             else
                 dq.push_front(n);
@@ -25,7 +25,7 @@ int main()
         {
             int n;
             cin >> n;
-            if(rev == false)
+            if(reve == false)
                 dq.push_front(n);
             else
                 dq.push_back(n);
@@ -36,7 +36,7 @@ int main()
                 cout << "No job for Ada?" << '\n';
             else
             {
-                if(rev == false)
+                if(reve == false)
                 {
                     cout << dq.front() << "\n";
                     dq.pop_front();
@@ -54,7 +54,7 @@ int main()
                 cout << "No job for Ada?" << '\n';
             else
             {
-                if(rev == false)
+                if(reve == false)
                 {
                     cout << dq.back() << "\n";
                     dq.pop_back();
@@ -68,10 +68,10 @@ int main()
         }
         else if(cmd =="reverse")
         {
-            if(rev == false)
-                rev = true;
+            if(reve == false)
+                reve = true;
             else
-                rev = false;
+                reve = false;
         }
     }
     return 0;

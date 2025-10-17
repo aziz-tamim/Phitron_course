@@ -62,11 +62,9 @@ int main()
         cin >> a >> b >> c;
         edge_list.push_back(Edge(a, b, c));
     }
-
     for (int i=0; i<n; i++)
         dis[i] = INT_MAX;
     dis[0] = 0;
-
     bellman_ford();
     return 0;
 }
