@@ -68,3 +68,44 @@ int main()
     bellman_ford();
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int x;
+    cin >> x;
+    if (x < 0)
+    {
+        cout << "false";
+        return 0;
+    }
+    vector<int> digit;
+    int temp = x;
+    while (temp>0)
+    {
+        digit.push_back(temp % 10);
+        temp /= 10;
+    }
+    int left = 0;
+    int right = digit.size()-1;
+    bool isPal = true;
+
+    while (left < right)
+    {
+        if (digit[left] != digit[right])
+        {
+            isPal = false;
+            break;
+        }
+        left++;
+        right--;
+    }
+
+    if(isPal)
+        cout << "true";
+    else
+        cout << "false";
+    return 0;
+}

@@ -14,9 +14,9 @@ int main()
         cin >> a >> b >> str;
         mp[{a,b}] = str;
     }
-    int q;
-    cin >> q;
-    while(q--)
+    int query;
+    cin >> query;
+    while(query--)
     {
         int ls1, ls2;
         cin >> ls1 >> ls2;
