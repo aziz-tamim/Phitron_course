@@ -1,51 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int n;
-    cin >> n;
-    vector<long long> arr(n);
-    for(int i=0; i<n; i++)
-        cin >> arr[i];
+int main()
+{
+    int num;
+    cin >> num;
+    vector<long long> arr1(num);
+    for(int i=0; i<num; i++)
+        cin >> arr1[i];
 
-    vector<long long> vc;
-    for(int i =0; i<n; i++)
+    vector<long long> arr2;
+    if (num%2 == 0)
     {
-        vc.push_back(arr[i]);
-        reverse(vc.begin(),vc.end());
+        for(int i=0; i<num; i++)
+        {
+            if((i+1)%2 == 1)
+                arr2.push_back(arr1[i]);
+            else
+                arr2.insert(arr2.begin(), arr1[i]);
+        }
     }
-    for(auto x : vc)
+    else
+    {
+        for(int i=0; i<num; i++)
+        {
+            if((i+1)%2 == 1)
+                arr2.insert(arr2.begin(), arr1[i]);
+            else
+                arr2.push_back(arr1[i]);
+        }
+    }
+    for (auto x : arr2)
         cout << x << " ";
+    cout << "\n";
+
     return 0;
 }
 
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main() {
-//     ios::sync_with_stdio(false);
-//     cin.tie(nullptr);
-
-//     int n;
-//     cin >> n;
-//     vector<long long> a(n);
-//     for(int i = 0; i < n; i++) cin >> a[i];
-
-//     deque<long long> dq;
-
-//     // alternating front/back push, starting front
-//     for(int i = 0; i < n; i++) {
-//         if(i % 2 == 0)
-//             dq.push_front(a[i]);
-//         else
-//             dq.push_back(a[i]);
-//     }
-
-//     for(auto x : dq) cout << x << " ";
-//     cout << "\n";
-
-//     return 0;
-// }

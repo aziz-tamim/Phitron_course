@@ -4,11 +4,11 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int tc;
-    cin >> tc;
+    int t;
+    cin >> t;
     deque<int> dq;
     bool rev = false;
-    while(tc--)
+    while(t--)
     {
         string cmd;
         cin >> cmd;
@@ -66,7 +66,7 @@ int main()
                 }
             }
         }
-        else if(cmd == "reverse")
+        else if(cmd =="reverse")
         {
             if(rev == false)
                 rev = true;
