@@ -116,9 +116,7 @@ int main()
     
     sort(v.begin(),v.end());
     for(auto val : v)
-    {
         cout << val << " ";
-    }
     cout << '\n';
     auto mn = min_element(v.begin(), v.end());
     cout << *mn << "\n";
