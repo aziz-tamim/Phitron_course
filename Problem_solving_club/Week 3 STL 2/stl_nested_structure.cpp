@@ -56,9 +56,13 @@ int main()
     auto LB1 = mp.lower_bound(x);
     if(LB1 != mp.end()) {
         int ans = LB1->first;
+        cout << ans << '\n';
         auto LB2 = mp[ans].lower_bound(y);
         if(LB2 != mp[ans].end())
         {
+            cout << *LB2 << '\n';
+        }
+        else{
             
         }
     }
