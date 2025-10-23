@@ -7,12 +7,10 @@ int main() {
     
     int T;
     cin >> T;
-    
     while (T--) {
         int N;
         long long C;
         cin >> N >> C;
-        
         vector<long long> B(N), D(N);
         for (int i = 0; i < N; i++) {
             cin >> B[i];
