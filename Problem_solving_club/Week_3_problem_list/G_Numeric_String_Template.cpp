@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool matchTemplate(const vector<long long> &arr, const string &s)
 {
     unordered_map<long long, char> numchar;
