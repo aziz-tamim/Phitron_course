@@ -21,7 +21,7 @@ int main()
                 cnt2++;
         }
 
-        if (cnt1+cnt2 >= 2)
+        if (cnt1 + cnt2 >= 2)
             cout << "Alice" << "\n";
         else
             cout << "Bob" << "\n";
