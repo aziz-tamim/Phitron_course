@@ -19,6 +19,7 @@
         "sstream": "cpp",
         "iomanip": "cpp",
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "functional": "cpp"
     }
 }
