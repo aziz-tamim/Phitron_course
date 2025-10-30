@@ -1,24 +1,24 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int n,k;
+    int n, k;
     cin >> n >> k;
     vector<int> arr(n);
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
         cin >> arr[i];
-    map<int,int> mp;
-    int l=0;
-    long long ans =0;
-    for(int r=0; r<n; r++)
+    map<int, int> mp;
+    int l = 0;
+    long long ans = 0;
+    for (int r = 0; r < n; r++)
     {
         mp[arr[r]]++;
-        while(mp.size() > k)
+        while (mp.size() > k)
         {
             mp[arr[l]]--;
-            if(mp[arr[l]] == 0)
+            if (mp[arr[l]] == 0)
                 mp.erase(arr[l]);
             l++;
         }
