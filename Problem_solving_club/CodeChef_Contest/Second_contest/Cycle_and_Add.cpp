@@ -25,7 +25,6 @@ int main()
 
         long long min_total = LLONG_MAX;
 
-        // Use monotonic queue for sliding window minimum
         vector<long long> B_double(2 * N);
         for (int i = 0; i < N; i++)
         {
@@ -33,7 +32,6 @@ int main()
             B_double[i + N] = B[i];
         }
 
-        // For each window size
         for (int x = 0; x < N; x++)
         {
             int w = x + 1;
@@ -42,7 +40,6 @@ int main()
             deque<int> dq;
             vector<long long> window_min(N);
 
-            // First window
             for (int i = 0; i < w; i++)
             {
                 while (!dq.empty() && B_double[dq.back()] >= B_double[i])
@@ -51,7 +48,6 @@ int main()
             }
             window_min[0] = B_double[dq.front()];
 
-            // Remaining windows
             for (int i = 1; i < N; i++)
             {
                 if (dq.front() < i)
@@ -63,7 +59,6 @@ int main()
                 window_min[i] = B_double[dq.front()];
             }
 
-            // Calculate total cost
             for (int i = 0; i < N; i++)
             {
                 cost += D[i] * window_min[(i - x + N) % N];
