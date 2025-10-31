@@ -44,7 +44,6 @@ int main()
     sort(v.begin(), v.end());
     for (int i = 0, j = n - 1; i < j;)
     {
-        // long long sum = 1LL * v[i].first + v[j].first;
         if ((1LL * v[i].first + v[j].first) > x)
             j--;
         else if ((1LL * v[i].first + v[j].first) < x)
