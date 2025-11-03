@@ -1,26 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    ios_base::sync_with_stdio(false);
+
+int main() {
+    ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int t;
     cin >> t;
     while(t--)
     {
         int n;
         cin >> n;
-        vector<int> arr(n);
-        vector<int> pre(n);
-        for(int i=0; i<n; i++)
+        vector<int> freq(201,0);
+        for(int i = 0; i < n; ++i)
         {
-            cin >> arr[i];
-            pre[arr[i]]++;
+            int x; cin >> x;
+            if (x>= 0 && x < (int)freq.size())
+                freq[x]++;
         }
-        int ans =0;
-        while(pre[ans]>=2 )
+        int ans = 0;
+        while(freq[ans]>0)
             ans++;
-        cout << ans << "\n";
+        cout << ans << '\n';
     }
     return 0;
 }
