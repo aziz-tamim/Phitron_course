@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -8,25 +8,25 @@ int main()
     cin >> tc;
     while(tc--)
     {
-        int a,b;
+        int a, b;
         cin >> a >> b;
         int swp = 0;
         bool flag = true;
-        for(int i=0; i<a; i++)
+        for (int i = 0; i < a; i++)
         {
             char c;
             cin >> c;
-            if(c == '1')
+            if (c == '1')
                 swp = b;
-            else if(c=='0')
+            else if (c == '0')
             {
-                if(swp>0)
+                if (swp > 0)
                     swp--;
                 else
                     flag = false;
             }
         }
-        if(flag)
+        if (flag)
             cout << "YES" << "\n";
         else
             cout << "NO" << '\n';
