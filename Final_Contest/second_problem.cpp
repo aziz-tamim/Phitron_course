@@ -23,8 +23,6 @@ int main()
     }
 
     for (auto a : maps)
-    {
         cout << a.first << " " << a.second.first << " " << a.second.second << "\n";
-    }
     return 0;
 }
