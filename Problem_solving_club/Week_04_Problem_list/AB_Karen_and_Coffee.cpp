@@ -5,10 +5,10 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int value = 200005;
+    int val = 200005;
     vector<int> arr1, arr2;
-    arr1.resize(value + 2);
-    arr2.resize(value + 2);
+    arr1.resize(val + 2);
+    arr2.resize(val + 2);
     int num, k, q;
     cin >> num >> k >> q;
     int rsz = 200005;
@@ -32,7 +32,7 @@ int main()
     for (int i = 1; i <= rsz; i++)
         arr2[i] = arr2[i] + arr2[i - 1];
 
-    while(q--)
+    while (q--)
     {
         int fst1, fst2;
         cin >> fst1 >> fst2;
