@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     s1.insert(2);
     s1.insert(5);
     s1.insert(2);
-    
+
     set<int> s2;
     s2.insert(9);
     s2.insert(5);
@@ -38,14 +38,14 @@ int main()
     s3.insert(12);
     s3.insert(1);
     s3.insert(6);
-    
+
     mp[5] = s1;
     mp[7] = s2;
     mp[10] = s3;
-    for(auto [x,y] : mp)
+    for (auto [x, y] : mp)
     {
         cout << x << " -> ";
-        for(auto value : y)
+        for (auto value : y)
         {
             cout << value << " ";
         }
@@ -54,21 +54,21 @@ int main()
 
     int x = 6, y = 8;
     auto LB1 = mp.lower_bound(x);
-    if(LB1 != mp.end()) {
+    if (LB1 != mp.end())
+    {
         int ans = LB1->first;
         cout << ans << '\n';
         auto LB2 = mp[ans].lower_bound(y);
-        if(LB2 != mp[ans].end())
+        if (LB2 != mp[ans].end())
         {
             cout << *LB2 << '\n';
         }
-        else{
-            
+        else
+        {
         }
     }
     else
     {
-        
     }
     return 0;
 }
