@@ -25,7 +25,7 @@ int main()
         {
             sum -= a[l];
             l++;
-        }  
+        }
         r++;
     }
     cout << ans << "\n";
