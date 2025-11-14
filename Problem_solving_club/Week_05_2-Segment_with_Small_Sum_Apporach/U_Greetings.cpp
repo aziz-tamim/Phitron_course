@@ -5,27 +5,36 @@ using namespace __gnu_pbds;
 using namespace std;
 template <typename T>
 using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+#define ll long long
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int tc;
     cin >> tc;
-    for(int i=0; i<tc; i++)
+    for (int i = 0; i<tc; i++)
     {
         int n;
         cin >> n;
-        vector<int> a(n);
+        vector<pair<int, int>> arr(n);
         for (int i = 0; i < n; i++)
-            cin >> a[i];
-        long long ans = 0;
-        pbds<int> p;
-        for (int i = n - 1; i >= 0; i--)
         {
-            ans += p.order_of_key(a[i]);
-            p.insert(a[i]);
+            int a, b;
+            cin >> a >> b;
+            arr[i] = {a, b};
+        }
+        sort(arr.begin(), arr.end());
+
+        pbds<int> pb;
+        ll ans = 0;
+        for (auto &x : arr)
+        {
+            int b = x.second;
+            ans += pb.size()-pb.order_of_key(b);
+            pb.insert(b);
         }
         cout << ans << "\n";
     }
-    return 0;
 }
