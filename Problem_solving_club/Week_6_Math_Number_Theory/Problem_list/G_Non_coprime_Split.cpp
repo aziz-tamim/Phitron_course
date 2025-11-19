@@ -5,26 +5,26 @@ int main()
 {
     int t;
     cin >> t;
-    while(t--)
+    while (t--)
     {
         int a, b;
         cin >> a >> b;
         bool found = false;
-        for(int i=a; i<=b; i++)
+        for (int i = a; i <= b; i++)
         {
-            for(int j=2; j*j <=i; j++)
+            for (int j = 2; j * j <= i; j++)
             {
-                if(i%j == 0)
+                if (i % j == 0)
                 {
-                    cout << j << " " << i-j << endl;
+                    cout << j << " " << i - j << endl;
                     found = true;
                     break;
                 }
             }
-            if(found)
+            if (found)
                 break;
         }
-        if(!found)
+        if (!found)
             cout << "-1" << endl;
     }
 }
