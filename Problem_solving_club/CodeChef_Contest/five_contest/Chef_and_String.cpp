@@ -1,42 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-long long maxScore(const string &S, long long K) {
-    long long n = S.size();
-    vector<char> T(S.begin(), S.end());
-
-    // Replace 'I' optimally
-    for (long long i = 0; i < n; i++) {
-        if (T[i] == 'I') {
-            if (i > 0) T[i] = T[i-1];
-            else if (i < n-1 && T[i+1] != 'I') T[i] = T[i+1];
-            else T[i] = 'A';
-        }
-    }
-
-    // Count score for single S
-    long long singleScore = 0;
-    for (long long i = 0; i < n-1; i++) {
-        if (T[i] == T[i+1]) singleScore++;
-    }
-
-    // Check junctions between repetitions
-    long long extra = (T[0] == T[n-1]) ? (K-1) : 0;
-
-    return singleScore * K + extra;
-}
-
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while (T--) {
-        long long N, K;
+    int tc;
+    cin >> tc;
+    while (tc--)
+    {
+        ll N, K;
         string S;
         cin >> N >> K >> S;
-        cout << maxScore(S, K) << "\n";
+
+        vector<pair<ll, char>> known;
+        for (ll i = 0; i < N; ++i)
+        {
+            if (S[i] != 'I')
+                known.push_back({i, S[i]});
+        }
+
+        if (known.empty())
+        {
+            ll ans = N * K - 1;
+            cout << ans << '\n';
+            continue;
+        }
+
+        ll inside_trans = 0;
+        for (size_t j = 0; j + 1 < known.size(); ++j)
+        {
+            if (known[j].second != known[j + 1].second)
+                inside_trans++;
+        }
+
+        char first_known = known.front().second;
+        char last_known = known.back().second;
+        ll boundary_trans = (first_known != last_known) ? 1 : 0;
+
+        ll total_trans = inside_trans * K + boundary_trans * max(0LL, K - 1);
+        
+        ll total_adj = N * K - 1;
+        ll ans = total_adj - total_trans;
+        cout << ans << '\n';
     }
     return 0;
 }
