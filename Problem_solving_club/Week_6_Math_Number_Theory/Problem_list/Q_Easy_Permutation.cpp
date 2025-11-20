@@ -13,8 +13,6 @@ int main()
         for(int i=0; i<n; i++)
         {
             cout << n-i << " ";
-            // if(i>2)
-            //     cout << " ";
         }
         cout << '\n';
     }
