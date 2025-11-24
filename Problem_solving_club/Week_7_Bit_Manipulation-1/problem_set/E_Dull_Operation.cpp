@@ -1,16 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int tc;
-    cin >> tc;
-    while (tc--)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        long long n;
+        ll n;
         cin >> n;
-        cout << n / 2 << "\n";
+        ll x = n;
+        ll y = n-1;
+        cout << x << " " << y << '\n';
     }
     return 0;
 }
