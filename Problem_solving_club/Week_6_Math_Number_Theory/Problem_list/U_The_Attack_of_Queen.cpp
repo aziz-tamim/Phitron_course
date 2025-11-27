@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 int main()
@@ -7,21 +7,21 @@ int main()
     cin.tie(nullptr);
     int tc;
     cin >> tc;
-    while(tc--)
+    while (tc--)
     {
-        ll n,x,y;
-        cin >> n >> x>> y;
-        ll lfs = y-1;
-        ll rgs = n-y;
-        ll ups = x-1;
-        ll dns = n-x;
+        ll n, x, y;
+        cin >> n >> x >> y;
+        ll lfs = y - 1;
+        ll rgs = n - y;
+        ll ups = x - 1;
+        ll dns = n - x;
 
-        ll upl = min(x-1, y-1);
-        ll upr = min(x-1, n-y);
-        ll dnl = min(n-x, y-1);
-        ll dnr = min(n-x, n-y);
+        ll upl = min(x - 1, y - 1);
+        ll upr = min(x - 1, n - y);
+        ll dnl = min(n - x, y - 1);
+        ll dnr = min(n - x, n - y);
 
-        ll ans = lfs + rgs + ups + dns + upl + upr+ dnl + dnr;
+        ll ans = lfs + rgs + ups + dns + upl + upr + dnl + dnr;
         cout << ans << '\n';
     }
     return 0;
