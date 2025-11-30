@@ -44,7 +44,7 @@ int main()
             if (poss)
                 ans = min(ans, cnt);
         }
-        if (ans == INT_MAX)
+        if(ans == INT_MAX)
             cout << -1 << "\n";
         else
             cout << ans << "\n";
