@@ -30,7 +30,7 @@ int main()
             {
                 sum -= a[l];
                 l++;
-            }
+            } 
             ans = max(ans, r-l+1);
         }
         cout << ans << "\n";
