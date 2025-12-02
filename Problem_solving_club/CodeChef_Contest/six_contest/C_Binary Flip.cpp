@@ -8,7 +8,7 @@ int main()
 
     int t;
     cin >> t;
-    while (t--)
+    while(t--)
     {
         int n;
         string s;
