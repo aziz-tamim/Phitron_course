@@ -1,0 +1,1 @@
+{"name":"Local: H_Brackets","url":"d:\\Phitron\\Problem_solving_club\\Online_Festival_1\\Long_Challeng_2\\H_Brackets.cpp","tests":[{"id":1764673399736,"input":"1\n()((()()))","output":"((()))"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Problem_solving_club\\Online_Festival_1\\Long_Challeng_2\\H_Brackets.cpp","group":"local","local":true}
