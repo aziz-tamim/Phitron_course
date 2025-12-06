@@ -12,13 +12,13 @@ int main()
         string st;
         cin >> a >> b >> st;
         vector<int> vc(b, 0);
-        for(int i= 0; i<b; i++)
-            vc[i] = (a-i + b-1)/b;
+        for (int i = 0; i < b; i++)
+            vc[i] = (a - i + b - 1) / b;
 
         int low = count(st.begin(), st.end(), '0');
         int one = a - low;
         bool poss = true;
-        for(int i= 0; i<b; i++)
+        for (int i = 0; i < b; i++)
         {
             int mx_cl = (vc[i] + 1) / 2;
             if (low > mx_cl)
@@ -33,7 +33,7 @@ int main()
 
         if (low > 0 || one > 0)
             poss = false;
-        if(poss)
+        if (poss)
             cout << "Yes" << "\n";
         else
             cout << "No" << "\n";
