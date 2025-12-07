@@ -1,54 +1,58 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define ll long long
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while (T--)
+    int t;
+    cin >> t;
+    while(t--)
     {
-        int N;
-        cin >> N;
-        vector<long long> A(N), B(N);
-        for (int i = 0; i < N; i++)
-            cin >> A[i];
-        for (int i = 0; i < N; i++)
-            cin >> B[i];
+        ll n;
+        cin >>n;
+        vector<ll> a(n);
+        vector<ll> b(n);
+        for(int i=0; i<n; i++)
+            cin >> a[i];
 
-        // Kadane for A: max subarray ending at each index
-        vector<long long> max_end_A(N);
-        long long curr = A[0];
-        max_end_A[0] = curr;
-        for (int i = 1; i < N; i++)
+        for(int i=0; i<n; i++)
+            cin >> b[i];
+        vector<ll> dp1(n); // every idx a suru theke mx subarray sum koto
+        dp1[0] = a[0];
+        for(int i=1; i<n; i++)
         {
-            curr = max(A[i], curr + A[i]);
-            max_end_A[i] = curr;
+            dp1[i] = max(dp1[i-1]+a[i], a[i]);
         }
 
-        // Kadane for B: max subarray starting at each index
-        vector<long long> max_start_B(N);
-        curr = B[N - 1];
-        max_start_B[N - 1] = curr;
-        for (int i = N - 2; i >= 0; i--)
+        vector<ll> dp2(n); // every idx a shesh theke mx subarray sum koto
+        dp2[n-1] = a[n-1];
+        for(int i=n-2; i>=0; i--)
         {
-            curr = max(B[i], curr + B[i]);
-            max_start_B[i] = curr;
+            dp2[i] = max(dp2[i+1] +a[i], a[i]);
         }
 
-        // Combine for all possible intersection points
-        long long answer = LLONG_MIN;
-        long long maxA = max_end_A[0];
-        answer = max(answer, maxA + max_start_B[0]);
-
-        for (int i = 1; i < N; i++)
+        vector<ll> dp3(n); // every idx a shesh theke mx subarray sum koto
+        dp3[0] = b[0];
+        for(int i=1; i<n; i++)
         {
-            maxA = max(maxA, max_end_A[i]);
-            answer = max(answer, maxA + max_start_B[i]);
+            dp3[i] = max(dp3[i-1] +b[i], b[i]);
         }
 
-        cout << answer << "\n";
+        vector<ll> dp4(n); // every idx a shesh theke mx subarray sum koto
+        dp4[n-1] = b[n-1];
+        for(int i=n-2; i>=0; i--)
+        {
+            dp4[i] = max(dp4[i+1] +b[i], b[i]);
+        }
+
+        ll ans = -1e18;
+        for(int i=0; i<n; i++)
+        {
+            ll sum_a = dp1[i] + dp2[i]-a[i];
+            ll sum_b = dp3[i] + dp4[i]-b[i];
+            ans = max(ans, sum_a+sum_b);
+        }
+        cout << ans << '\n';
     }
 }
