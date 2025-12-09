@@ -28,9 +28,9 @@ int main()
                 l = mid+1;
         }
         if(found)
-            cout << "YES\n";
+            cout << "YES" << '\n';
         else
-            cout << "NO\n";
+            cout << "NO" << '\n';
     }
     return 0;
 }
