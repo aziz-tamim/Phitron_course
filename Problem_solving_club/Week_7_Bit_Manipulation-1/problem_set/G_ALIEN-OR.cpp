@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
     int tc;
     cin >> tc;
     while(tc--)
@@ -28,7 +26,7 @@ int main()
         vector<int> dp(1<<m, 0);
         queue<int> q;
 
-        for (int x : v)
+        for(int x : v)
         {
             if(!dp[x])
             {
@@ -65,3 +63,4 @@ int main()
             cout << "NO" << "\n";
     }
 }
+
