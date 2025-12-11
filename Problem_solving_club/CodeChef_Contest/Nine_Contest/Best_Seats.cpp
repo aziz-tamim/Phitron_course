@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int tc;
+    cin >> tc;
+    while(tc--)
+    {
+        int n;
+        cin >>n;
+        vector<int> a(n);
+        for(int i=0; i<n;i++)
+            cin >>a[i];
+
+        int high = INT_MAX;
+        for (int i=0; i< n-1; i++)
+            high = min(high, a[i] + a[i+1]);
+        cout << high << "\n";
+    }
+
+    return 0;
+}
