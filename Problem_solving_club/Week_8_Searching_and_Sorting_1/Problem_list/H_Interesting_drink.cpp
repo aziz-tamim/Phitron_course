@@ -19,7 +19,7 @@ int main()
         int l=0, r=n-1, ans = -1;
         while(l<=r)
         {
-            int mid= (l+r)/2;
+            int mid = (l+r)/2;
             if(a[mid] <= x)
             {
                 ans = mid;
