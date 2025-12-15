@@ -29,7 +29,3 @@ int main()
     }
     return 0;
 }
-
-
-hello wperp
-recently apnara black friday deels shompuro korecen. 
