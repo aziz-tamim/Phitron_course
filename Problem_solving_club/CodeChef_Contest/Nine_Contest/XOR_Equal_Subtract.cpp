@@ -1,52 +1,34 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
-bool good(const vector<int> &v)
-{
-    int n = v.size();
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            if ((v[i] & v[j]) != 0)
-                return false;
-        }
-    }
-    return true;
-}
-
 int main()
 {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while (T--)
+    int t;
+    cin >> t;
+    while(t--)
     {
-        int N;
-        cin >> N;
-        vector<int> A(N);
-        for (int i = 0; i < N; i++)
-            cin >> A[i];
-        int best = 1;
-
-        for(int mask = 1; mask < (1 << N); mask++)
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for(int i=0; i<n; i++)
+            cin >> a[i];
+        sort(a.begin(), a.end());
+        vector<int> dp(n,1); // 1,1,1...
+        // dp[i] = mane i index porjonto max length of good subsequence
+        int mx = 1;
+        for(int i=1; i<n; i++)
         {
-            vector<int> v;
-            for (int i = 0; i < N; i++)
+            for(int j=0; j<i; j++)
             {
-                if (mask & (1 << i))
-                    v.push_back(A[i]);
+                if(a[i]^a[j] == abs(a[i]-a[j]))
+                {
+                    dp[i] = max(dp[i], dp[j]+1);
+                }
             }
-            if ((int)v.size() <= best)
-                continue;
-            if (good(v))
-                best = v.size();
+            mx = max(mx, dp[i]);
         }
-
-        cout << best << '\n';
+        cout << mx << endl;
     }
-
     return 0;
 }
