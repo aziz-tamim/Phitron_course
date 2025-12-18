@@ -1,37 +1,28 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
+#define ll long long
 int main()
 {
-    int n;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    ll n;
     cin >> n;
-    vector<pair<int,int>> movies(n);
-    for(int i = 0; i < n; i++)
+    vector<pair<int,int>> arr(n);
+    for(int i=0; i<n; i++)
     {
-        int start, end;
-        cin >> start >> end;
-        movies[i] = {start, end};
+        cin >> arr[i].first >> arr[i].second;
+        swap(arr[i].first, arr[i].second);
     }
-    for(int i = 0; i < n; i++)
+    sort(arr.begin(), arr.end());
+    int ans = 0, last_end = -1;
+    for(auto [end, start]: arr)
     {
-        for(int j = i + 1; j < n; j++)
-        {
-            if(movies[i].second > movies[j].second)
-                swap(movies[i], movies[j]);
-        }
-    }
-
-    int last_end = 0;
-    int count = 0;
-    for(int i = 0; i < n; i++)
-    {
-        int start = movies[i].first;
-        int end = movies[i].second;
         if(start >= last_end)
         {
-            count++;
+            ans++;
             last_end = end;
         }
     }
-    cout << count << "\n";
+    cout << ans << '\n';
     return 0;
 }
