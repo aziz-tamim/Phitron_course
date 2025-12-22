@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     int tc;
@@ -10,7 +9,6 @@ int main()
         int n;
         string str;
         cin >> n >> str;
-
         if(str == "codechef")
             cout << "topcoder" << "\n";
         else if(str == "five")
@@ -23,3 +21,4 @@ int main()
     }
     return 0;
 }
+
