@@ -12,8 +12,7 @@ int main()
         for (int i = 0; i < n; i++)
             cin >> a[i];
         sort(a.begin(), a.end());
-        vector<int> dp(n, 1); // 1,1,1..
-        // dp[i] = mane i index porjonto max length of good subsequence
+        vector<int> dp(n, 1);
         int mx = INT_MIN;
         for (int i = 1; i < n; i++) // A
         {
