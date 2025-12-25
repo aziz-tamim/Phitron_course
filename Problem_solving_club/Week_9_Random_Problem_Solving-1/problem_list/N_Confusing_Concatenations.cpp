@@ -1,36 +1,44 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
     int tc;
     cin >> tc;
-    while (tc--)
+    while(tc--)
     {
         int n;
         cin >> n;
-
-        map<int, int> mp;
-        for (int i = 0; i < n; i++)
+        vector<int> v(n);
+        for(int i=0; i<n; i++)
+            cin >> v[i];
+        vector<int> a,b;
+        a.push_back(v[0]);
+        int i=1;
+        while(i<n && v[i]<v[0])
         {
-            int x;
-            cin >> x;
-            mp[x]++;
+            a.push_back(v[i]);
+            i++;
         }
-
-        int uniqueCount = 0;
-        for (auto it : mp)
+        while(i<n)
         {
-            if (it.second == 1)
-                uniqueCount++;
+            b.push_back(v[i]);
+            i++;
         }
-        if (uniqueCount == mp.size())
-            cout << uniqueCount - 1 << "\n";
-        else
-            cout << uniqueCount << "\n";
+        if(b.size() == 0)
+        {
+            cout << -1 << "\n";
+            continue;
+        }
+        cout << a.size() << "\n";
+        for(int x : a)
+            cout << x << " ";
+        cout << "\n";
+        cout << b.size() << "\n";
+        for(int x: b)
+            cout << x << " ";
+        cout << "\n";
     }
     return 0;
 }
