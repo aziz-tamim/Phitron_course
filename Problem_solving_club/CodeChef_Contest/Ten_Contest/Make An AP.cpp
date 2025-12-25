@@ -10,10 +10,10 @@ int main()
     cin >> tc;
     while(tc--)
     {
-        int n;
+        ll n;
         cin >> n;
         vector<ll> arr(n);
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
             cin >> arr[i];
 
         if(n <= 2)
@@ -22,7 +22,7 @@ int main()
             continue;
         }
         ll vinno = 0;
-        for(int i = 1; i < n; i++)
+        for(int i=1; i < n; i++)
         {
             ll diff = arr[i] - arr[i - 1];
             if(i == 1)

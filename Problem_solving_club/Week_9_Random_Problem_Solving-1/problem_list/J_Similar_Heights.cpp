@@ -1,29 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
     int tc;
     cin >> tc;
-    while (tc--)
+    while(tc--)
     {
         int n;
         cin >> n;
-        int arr[n];
-        map<int, int> mp;
+        unordered_map<ll, int> freq;
         for(int i=0; i<n; i++)
         {
-            cin >> arr[i];
-            mp[arr[i]]++;
+            ll h;
+            cin >> h;
+            freq[h]++;
         }
-        int diff = 0;
-        for(auto it : mp)
+        int cnt = 0;
+        for(auto it : freq)
         {
             if(it.second == 1)
-                diff++;
+                cnt++;
         }
-        cout << diff << "\n";
+        int ans = (cnt+1)/2;
+        cout << ans << "\n";
     }
     return 0;
 }

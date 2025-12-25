@@ -2,49 +2,34 @@
 using namespace std;
 #define ll long long
 
+ll sum(ll x)
+{
+    return (x*(x+1))/2;
+}
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while (T--)
+    int t;
+    cin >> t;
+    while(t--)
     {
-        int N;
-        ll M;
-        cin >> N >> M;
-        vector<ll> A(N), B(N);
-        for (int i = 0; i < N; i++)
-            cin >> A[i];
-        for (int i = 0; i < N; i++)
-            cin >> B[i];
+        ll n,m;
+        cin >> n >> m;
+        vector<ll>a(n+1),b(n+1);
+        for(int i=1; i<=n; i++)
+            cin >> a[i];
+        for(int i=1; i<=n; i++)
+            cin >> b[i];
 
-        ll Y = 0, X_min = 0;
-        for (int i = 0; i < N; i++)
+        ll f1=1, fm=m;
+        for(int i=1; i<=n; i++)
         {
-            X_min = max(X_min, A[i] - Y);
-            Y += B[i];
+            f1 = max(a[i], f1+b[i]);
+            fm = max(a[i], fm+b[i]);
         }
 
-        ll total_B = accumulate(B.begin(), B.end(), 0LL);
-        ll fXmin = X_min + total_B;
-        ll ans = 0;
-
-        if (M < X_min)
-        {
-            ans = M * fXmin;
-        }
-        else
-        {
-            // constant part
-            ans += (X_min - 1) * fXmin;
-            // linear part
-            ll cnt = M - X_min + 1;
-            ll sum_linear = M * (M + 1) / 2 - (X_min - 1) * X_min / 2;
-            ans += sum_linear + cnt * total_B;
-        }
-        cout << ans << "\n";
+        ll k = fm-f1;
+        ll ans = f1*(m-k);
+        ans+= (sum(fm)-sum(f1));
+        cout << ans << endl;
     }
-    return 0;
 }
