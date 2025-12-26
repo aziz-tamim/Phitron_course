@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
-
 ll sum(ll x)
 {
     return (x*(x+1))/2;
