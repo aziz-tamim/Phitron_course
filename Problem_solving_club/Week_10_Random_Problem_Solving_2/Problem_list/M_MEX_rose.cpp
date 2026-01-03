@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -6,24 +6,24 @@ int main()
     cin.tie(nullptr);
     int tc;
     cin >> tc;
-    while(tc--)
+    while (tc--)
     {
-        int n,m;
+        int n, m;
         cin >> n >> m;
-        vector<int> cnt(n+1, 0);
-        for(int i=0; i<n; i++)
+        vector<int> cnt(n + 1, 0);
+        for (int i = 0; i < n; i++)
         {
             int x;
             cin >> x;
             cnt[x]++;
         }
         int fnd = 0;
-        for(int i=0; i<m; i++)
+        for (int i = 0; i < m; i++)
         {
-            if(cnt[i] == 0)
+            if (cnt[i] == 0)
                 fnd++;
         }
-        int ans = max(fnd, cnt[m]); 
+        int ans = max(fnd, cnt[m]);
         cout << ans << "\n";
     }
     return 0;
