@@ -7,7 +7,7 @@ int main()
     cin.tie(nullptr);
     int tc;
     cin >> tc;
-    while (tc--)
+    while(tc--)
     {
         ll n;
         cin >> n;
@@ -15,7 +15,7 @@ int main()
         for (int i = 0; i < n; i++)
             cin >> arr[i];
 
-        if (n <= 2)
+        if(n <= 2)
         {
             cout << 0 << "\n";
             continue;
