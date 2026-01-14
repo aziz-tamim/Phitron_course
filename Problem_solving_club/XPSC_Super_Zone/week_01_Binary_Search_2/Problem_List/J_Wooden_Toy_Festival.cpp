@@ -1,25 +1,25 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t;
-    cin >> t;
-    while (t--)
+    int tc;
+    cin >> tc;
+    while(tc--)
     {
         int n;
         cin >> n;
         vector<int> a(n);
-        for (int i = 0; i < n; i++)
+        for(int i=0; i<n; i++)
             cin >> a[i];
         sort(a.begin(), a.end());
         auto ok = [&](int time)
         {
             int cnt = 1, l = 0;
-            for (int r = 0; r < n; r++)
+            for(int r=0; r<n; r++)
             {
-                if (a[r] - a[l] > 2 * time)
+                if(a[r]-a[l] > 2 * time)
                 {
                     l = r;
                     cnt++;
@@ -27,17 +27,17 @@ int main()
             }
             return cnt <= 3;
         };
-        int l = 0, r = 1e9, mid, ans;
-        while (l <= r)
+        int l=0, r=1e9, mid, ans;
+        while(l<=r)
         {
-            mid = l + (r - l) / 2;
-            if (ok(mid))
+            mid = l+(r-l)/2;
+            if(ok(mid))
             {
                 ans = mid;
-                r = mid - 1;
+                r = mid-1;
             }
             else
-                l = mid + 1;
+                l = mid+1;
         }
         cout << ans << "\n";
     }
