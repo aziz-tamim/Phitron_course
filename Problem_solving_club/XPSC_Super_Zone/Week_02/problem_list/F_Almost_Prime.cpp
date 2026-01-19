@@ -31,7 +31,7 @@ int main()
     cin >> n;
     int num = 2;
     int primeCnt = 0;
-    while(num <=n)
+    while(num <=n) 
     {
         int tmp = num;
         map<int,int> cnt;
@@ -52,4 +52,3 @@ int main()
     cout << primeCnt << "\n";
     return 0;
 }
-
