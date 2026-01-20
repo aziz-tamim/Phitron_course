@@ -5,12 +5,11 @@ vector<int> allPrime;
 void sieve()
 {
     vector<bool> prime(maxN+1, true);
-    prime[0] = prime[1] = false;
     for(int i=2; i*i<= maxN; i++)
     {
         if(prime[i])
         {
-            for(int j= i+i; j<=maxN; j+= i)
+            for(int j= i*i; j<=maxN; j+= i)
                 prime[j] = false;
         }
     }
