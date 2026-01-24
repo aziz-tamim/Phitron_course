@@ -10,9 +10,9 @@ int main()
     while(tc--)
     {
         int x,y;
-        cin >> x >> y; 
-        if(x&1) // x%2!= 0 odd check
-            cout << "Alice" << "\n";
+        cin >> x >> y;
+        if(x&1)
+            cout << "Alice" << '\n';
         else
             cout << "Bob" << "\n";
     }
