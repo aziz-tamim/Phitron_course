@@ -14,7 +14,6 @@ int main()
         vector<ll> arr(n);
         for (int i = 0; i < n; i++)
             cin >> arr[i];
-
         if(n <= 2)
         {
             cout << 0 << "\n";

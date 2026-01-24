@@ -18,7 +18,7 @@ int main()
             ans = 9;
         else if(n==3)
             ans = 29;
-        else if(n== 4)
+        else if(n==4)
             ans = 56;
         else
             ans = 5*(n*n-n-1);
