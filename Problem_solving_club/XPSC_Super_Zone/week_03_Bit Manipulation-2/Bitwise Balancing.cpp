@@ -31,9 +31,9 @@ int main()
             if(!kth_bit_on(b,k) && kth_bit_on(d,k))
                 a = turn_on_kth_bit(a,k);
             if(kth_bit_on(c,k) && kth_bit_on(d,k))
-                a = turn_off_kth_bit(a,k);   
+                a = turn_off_kth_bit(a,k);
         }
-        if((a|b) - (a&c) == d)
+        if((a|b)-(a&c) == d)
             cout << a << '\n';
         else
             cout << -1 << '\n';

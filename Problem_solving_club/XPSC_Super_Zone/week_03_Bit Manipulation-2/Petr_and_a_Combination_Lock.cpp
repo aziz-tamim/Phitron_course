@@ -19,13 +19,9 @@ int main()
         for(int k=0; k<n; k++)
         {
             if((mask >> k) & 1)
-            {
                 sum += a[k];
-            }
             else
-            {
                 sum -= a[k];
-            }
         }
         if(sum % 360 == 0)
         {
