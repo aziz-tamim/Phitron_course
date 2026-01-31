@@ -23,7 +23,7 @@ int main()
         ll ans = 0;
         for(int i=0; i<maxN; i++)
         {
-            ans += (1LL * cnt[i] * (cnt[i]-1))/2;
+            ans += (1LL * cnt[i] * (cnt[i]-1)) / 2;
         }
         cout << ans << "\n";
     }

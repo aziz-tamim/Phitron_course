@@ -19,9 +19,7 @@ int main()
             {
                 ll val = n-(1LL << k);
                 if(val>0)
-                {
                     ans.push_front(val);
-                }
             }
         }
         ans.push_back(n);
