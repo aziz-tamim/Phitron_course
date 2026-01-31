@@ -24,7 +24,7 @@ int main()
                 }
             }
         }
-        ans.push_back(n); 
+        ans.push_back(n);
         cout << ans.size() << '\n';
         for(auto val : ans)
             cout << val << " ";

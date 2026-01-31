@@ -9,9 +9,7 @@ int main()
     cin >> n;
     vector<int> a(n);
     for(int i=0; i<n; i++)
-    {
         cin >> a[i];
-    }
     bool ok = false;
     for(int mask = 0; mask<(1<<n); mask++)
     {
@@ -32,6 +30,6 @@ int main()
     if(ok)
         cout << "YES" << '\n';
     else
-        cout << "NO" << "\n";
+        cout << "NO" << '\n';
     return 0;
 }
