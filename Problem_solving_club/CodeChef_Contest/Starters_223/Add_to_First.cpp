@@ -20,7 +20,7 @@ int main()
         vector<bool> parbo(n);
         ll mx = 0;
         for(int i=0; i<n; i++)
-        {
+        { 
             if(a[i] > mx)
             {
                 parbo[i] = true;
