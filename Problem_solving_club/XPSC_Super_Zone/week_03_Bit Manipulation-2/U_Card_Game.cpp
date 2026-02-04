@@ -16,26 +16,28 @@ int main()
         cin >> n;
         string str;
         cin >> str;
-        int mxA =0, mxB =0;
-        int fst = false;
+        set<int> st1, st2;
         for(int i=0; i<n; i++)
         {
             if(str[i] == 'A')
-            {
-                mxA = max(mxA, i+1);
-                if(i+1 == 1)
-                    fst = true;
-            }
+                st1.insert(i+1);
             else
-                mxB = max(mxB, i+1);
+                st2.insert(i+1);
         }
-        if(mxA > mxB)
+        if(st1.count(1) && st1.count(n))
             cout << "Alice" << nl;
-        else if(mxB > mxA)
+        else if(st2.count(1) && st2.count(n))
             cout << "Bob" << nl;
+        else if(st1.count(1))
+        {
+            if(st2.size() >= 2)
+                cout << "Bob" << nl;
+            else
+                cout << "Alice" << nl;
+        }
         else
         {
-            if(fst)
+            if(st1.count(n-1))
                 cout << "Alice" << nl;
             else
                 cout << "Bob" << nl;

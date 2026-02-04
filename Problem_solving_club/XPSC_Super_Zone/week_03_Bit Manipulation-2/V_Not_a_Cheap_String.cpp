@@ -22,7 +22,7 @@ int main()
         vector<int> cnt(26, 0);
         for(char ch : str)
             cnt[ch - 'a']++;
-        for(int i=25; i>=0 && sum > x; i--)
+        for(int i=25; i>=0; i--)
         {
             while(cnt[i] && sum > x)
             {
