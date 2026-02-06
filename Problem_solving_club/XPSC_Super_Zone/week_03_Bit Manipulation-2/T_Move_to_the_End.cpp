@@ -1,39 +1,3 @@
-// // AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
-// #include<bits/stdc++.h>
-// using namespace std;
-// #define ll long long
-// int main()
-// {
-//     ios_base::sync_with_stdio(false);
-//     cin.tie(nullptr);
-//     int tc;
-//     cin >> tc;
-//     while(tc--)
-//     {
-//         int n;
-//         cin >> n;
-//         vector<ll> arr(n);
-//         for(int i=0; i<n; i++)
-//             cin >> arr[i];
-//         ll suff = 0;
-//         ll lft = LLONG_MIN;
-
-//         for(int i=1; i<=n; i++)
-//         {
-//             int curr = n-i;
-//             suff += arr[curr];
-//             if(curr-1 >= 0)
-//                 lft = max(lft, arr[curr-1]);
-//             ll ans = suff;
-//             if(i<n && lft != LLONG_MIN)
-//                 ans = max(ans, suff-arr[curr]+lft);
-//             cout << ans << " ";
-//         }
-//         cout << '\n';
-//     }
-//     return 0;
-// }
-
 // AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
 #include<bits/stdc++.h>
 using namespace std;

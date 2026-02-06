@@ -12,6 +12,8 @@ int main()
     cin >> tc;
     while(tc--)
     {
+        int n,m;
+        cin >> n >> m;
         
     }
     return 0;
