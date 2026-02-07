@@ -24,3 +24,30 @@ int main()
     cout << __lg(39) << "\n";
     return 0;
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while(t--) {
+        int n;
+        string s;
+        cin >> n >> s;
+
+        int ans = 0;
+        char cur = '0'; // finger starts at 0
+
+        for (int i = 0; i < n; i++) {
+            if(s[i] != cur) ans++; // finger change
+            cur = s[i];
+        }
+
+        // adjust according to number of transitions
+        if(ans >= 3) cout << n + ans - 2 << "\n";
+        else if(ans == 2) cout << n + ans - 1 << "\n";
+        else cout << n + ans << "\n";
+    }
+    return 0;
+}
