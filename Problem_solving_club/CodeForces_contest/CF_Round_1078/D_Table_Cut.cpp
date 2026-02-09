@@ -6,7 +6,8 @@ int main() {
     cin.tie(nullptr);
 
     int t; cin >> t;
-    while(t--){
+    while(t--)
+    {
         int n,m;
         cin >> n >> m;
         vector<vector<int>> a(n,vector<int>(m));
@@ -22,7 +23,6 @@ int main() {
             }
         }
 
-        // find row-cut and column-cut max
         int sumR = 0, sumC = 0;
         int maxVal = 0;
         int rCut = 0, cCut = 0;
