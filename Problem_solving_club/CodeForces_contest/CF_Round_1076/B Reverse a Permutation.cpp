@@ -1,9 +1,12 @@
 // AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define nl "\n"
+#define sp " "
 int main()
 {
-    ios_base::sync_with_stdio(false);
+    ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int tc;
     cin >> tc;
@@ -12,32 +15,35 @@ int main()
         int n;
         cin >> n;
         vector<int> arr(n);
-        for(int i=0; i<n; i++)
+        for(int i=0;i<n;i++)
             cin >> arr[i];
-        bool ok = false;
-        for(int i=0; i<n; i++)
+        vector<int> suff(n);
+        suff[n-1] = arr[n-1];
+        for(int i=n-2; i>=0; i--)
+            suff[i] = max(arr[i], suff[i+1]);
+
+        int l = 0, r = 0;
+        for(int i=0;i<n;i++)
         {
-            if(ok)
-                break;
-            int mx = arr[i];
-            int pos = -1;
-            for(int j=i+1; j<n; j++)
+            if(arr[i] < suff[i])
             {
-                if(arr[j] > mx)
+                l = i;
+                for(int j=i;j<n;j++)
                 {
-                    mx = arr[j];
-                    pos = j;
+                    if(arr[j]==suff[i])
+                    {
+                        r = j;
+                        break;
+                    }
                 }
-            }
-            if(pos != -1)
-            {
-                reverse(arr.begin()+i, arr.begin()+pos+1);
-                ok = true;
+                break;
             }
         }
-        for(int x : arr)
-            cout << x << " ";
-        cout << "\n";
+        if(l < r)
+            reverse(arr.begin()+l, arr.begin()+r+1);
+        for(int x: arr)
+            cout << x << sp;
+        cout << nl;
     }
     return 0;
 }

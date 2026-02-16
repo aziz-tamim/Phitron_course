@@ -1,29 +1,37 @@
 // AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define nl "\n"
+#define sp " "
 int main()
 {
-    ios_base::sync_with_stdio(false);
+    ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int tc;
     cin >> tc;
     while(tc--)
     {
-        int n;
+        long long n;
         cin >> n;
-        int arr[n+1];
+        vector<long long> arr(n);
         for(int i=0; i<n; i++)
             cin >> arr[i];
-        sort(arr+1, arr+n+1);
-        for(int i=2; i<=n-1; i+=2)
+
+        sort(arr.begin(), arr.end());
+        bool ok = true;
+        for(int i=1; i<n-1; i+=2)
         {
             if(arr[i] != arr[i+1])
             {
-                cout << "NO" << "\n";
-                return;
+                ok = false;
+                break;
             }
         }
-        cout << "YES" << '\n';
+        if(ok)
+            cout << "YES" << nl;
+        else
+            cout << "NO" << nl;
     }
     return 0;
 }

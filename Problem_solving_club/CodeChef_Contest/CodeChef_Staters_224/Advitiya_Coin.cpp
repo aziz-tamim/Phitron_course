@@ -1,7 +1,7 @@
 // AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long
+#define ll ll
 #define nl "\n"
 #define sp " "
 int main()
