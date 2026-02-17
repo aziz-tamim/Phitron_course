@@ -12,7 +12,16 @@ int main()
     cin >> tc;
     while(tc--)
     {
-        
+        int n,m;
+        cin >> n >> m;
+        map<int, set<int>> g;
+        for(int i=1; i<=m; i++)
+        {
+            int u,v;
+            cin >> u >> v;
+            g[u].insert(v);
+            g[v].insert(u);
+        }
     }
     return 0;
 }
