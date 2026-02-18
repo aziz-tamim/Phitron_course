@@ -32,7 +32,7 @@ int main()
     {
         int n;
         cin >> n;
-        vector<int> a(n);
+        vector<int> a(n+1);
         for(int i=1; i<=n; i++)   // O(N+N)
             cin >> a[i];
         bool f = true;
@@ -44,7 +44,7 @@ int main()
                 break;
             }
         }
-        if(f)
+        if(f) 
             cout << "YES" << nl;
         else
             cout << "NO" << nl;
