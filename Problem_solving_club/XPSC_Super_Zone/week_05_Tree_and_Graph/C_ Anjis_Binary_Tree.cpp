@@ -12,13 +12,10 @@ void dfs(int u)
     if(g[u][0] != 0)
     {
         int v = g[u][0];
-        if(s[u-1] != 'L'){
+        if(s[u-1] != 'L')
             operation[v] = operation[u] +1;
-        }
         else
-        {
             operation[v] = operation[u];
-        }
         dfs(v);
     }
     if(g[u][1] != 0)
