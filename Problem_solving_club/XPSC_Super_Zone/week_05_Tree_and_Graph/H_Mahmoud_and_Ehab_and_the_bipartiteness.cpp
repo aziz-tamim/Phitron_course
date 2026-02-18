@@ -11,7 +11,7 @@ ll fstCnt = 0, scndCnt = 0;
 ll visi[maxN];
 void dfs(int u, int par, int col)
 {
-    visi[u] = 1;
+    visi[u] = 1;    
     if(col == 1)
         fstCnt++;
     else
