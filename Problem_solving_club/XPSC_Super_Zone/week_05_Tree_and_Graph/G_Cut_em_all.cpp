@@ -6,7 +6,7 @@ using namespace std;
 #define sp " "
 const int maxN = 1e5+5;
 vector<int> a[maxN];
-int n,ans = 0;a
+int n,ans = 0;
 int dfs(int x, int par)
 {
     int total = 1;
