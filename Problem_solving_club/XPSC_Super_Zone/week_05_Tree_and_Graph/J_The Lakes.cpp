@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define nl "\n"
+#define nl "\n"  
 #define sp " "
 int grid[1005][1005];
 bool vis[1005][1005];
