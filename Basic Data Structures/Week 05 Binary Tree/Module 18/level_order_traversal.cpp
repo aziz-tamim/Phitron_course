@@ -21,12 +21,12 @@ void level_order(Node* root)
     q.push(root);
     while(!q.empty())
     {
-        // 1 ber kore ana
+        // ber kore ana
         Node* f = q.front();
         q.pop();
-        // 2 oi node ke niye kaj kora
+        // oi node ke niye kaj kora
         cout << f->val << " ";
-        // 3 children push kora
+        // oi noad er children gula push kora
         if(f->left)
             q.push(f->left);
         if(f->right)
