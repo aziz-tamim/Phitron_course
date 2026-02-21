@@ -1,38 +1,57 @@
-#include <bits/stdc++.h>
+// AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
+#include<bits/stdc++.h>
 using namespace std;
-
-vector<vector<int>> tree;
-vector<int> leaf;
-
-int dfs(int u){
-    if(tree[u].empty())
-        return leaf[u] = 1;
+#define ll long long
+#define nl "\n"
+#define sp " "
+const int maxN = 2e5+5;
+vector<int> g[maxN];
+int arr[maxN];
+int dfs(int x, int par)
+{
     int cnt = 0;
-    for(int v : tree[u]) cnt += dfs(v);
-    return leaf[u] = cnt;
+    bool leaf = true;
+    for(auto v : g[x])
+    {
+        if(v == par)
+            continue;
+        cnt += dfs(v, x);
+        leaf = false;
+    }
+    if(leaf)
+        arr[x] = 1;
+    else
+        arr[x] = cnt;
+    return arr[x];
 }
-
-int main(){
-    ios::sync_with_stdio(false);
+int main()
+{
+    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int t; cin >> t;
-    while(t--){
-        int n; cin >> n;
-        tree.assign(n+1, {});
-        leaf.assign(n+1, 0);
-
-        for(int i=0;i<n-1;i++){
-            int u,v; cin >> u >> v;
-            tree[u].push_back(v); 
+    int tc;
+    cin >> tc;
+    while(tc--)
+    {
+        int n;
+        cin >> n;
+        for(int i=0; i<=n; i++)
+            g[i] = vector<int>();
+        for(int i=1; i<n; i++)
+        {
+            int x, y;
+            cin >> x >> y;
+            g[x].push_back(y);
+            g[y].push_back(x);
         }
-
-        dfs(1);
-
-        int q; cin >> q;
-        while(q--){
-            int x,y; cin >> x >> y;
-            cout << 1LL * leaf[x] * leaf[y] << "\n";
+        dfs(1, 0);
+        int q;
+        cin >> q;
+        while(q--)
+        {
+            int x, y;
+            cin >> x >> y;
+            cout << 1LL * arr[x]*arr[y] << nl;
         }
     }
+    return 0;
 }

@@ -1,4 +1,4 @@
-// AUTHOR :- ABDUL AZIZ TAMIM
+// AUTHOR :- ABDUL AZIZ TAMIM (tamimaziz2007@gmail.com)
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -14,15 +14,18 @@ int main()
     {
         ll x,y;
         cin >> x >> y;
-        if(x>=y)
-            cout << "Alice" << nl;
-        else
+        bool istrue = false;
+        if(x<y)
         {
-            if(min(x/2,y/3) >= y-x)
-                cout << "Bob" << nl;
-            else
-                cout << "Alice" << nl;
+            ll xpos = x/2;
+            ll ypos = y/3;
+            if(min(xpos,ypos) >= y-x)
+                istrue = true;
         }
+        if(istrue)
+            cout << "Bob" << nl;
+        else
+            cout << "Alice" << nl;
     }
     return 0;
 }
