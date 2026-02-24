@@ -48,7 +48,6 @@ using namespace std;
 #define sp " "
 const int maxN = 1e5+9;
 ll n, dp[maxN][3], happiness[maxN][3];  // complexity O(9*n)
-
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -81,6 +80,5 @@ int main()
         }
     }
     cout << max({dp[n][0], dp[n][1],dp[n][2]}) << nl;
-    
     return 0;
 }
