@@ -17,7 +17,7 @@ ll f(int i, int sum)
         return dp[i][sum];
 
     ll ans = 0;
-    if(palindromes[i] <= sum) 
+    if(palindromes[i] <= sum)
     {
         ans += f(i, sum-palindromes[i]) % MOD;
     }

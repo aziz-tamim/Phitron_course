@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int val[1005],weight[1005];
+int val[1005], weight[1005];
 
 int knapsack(int i, int mx_weight)
 {
@@ -30,7 +30,6 @@ int main()
     for(int i=0; i<n; i++)
         cin >> weight[i];
     cin >> mx_weight;
-
     cout << knapsack(n-1,mx_weight) << endl;
     return 0;
 }
