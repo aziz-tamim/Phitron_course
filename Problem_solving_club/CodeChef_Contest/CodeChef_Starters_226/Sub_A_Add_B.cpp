@@ -16,7 +16,9 @@ int main()
         cin >> n >> a >> b;
         int ans = n;
         while(ans >= a)
+        {
             ans = ans-(a-b);
+        }
         cout << ans << nl;
     }
     return 0;

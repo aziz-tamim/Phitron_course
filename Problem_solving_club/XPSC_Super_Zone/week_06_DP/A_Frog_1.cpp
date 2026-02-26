@@ -18,15 +18,10 @@
 //    }
 
 //    int ans = inf;
-//    if (i + 1 <= n)
-//    {
+//    if(i+1 <= n)
 //       ans = min(ans, abs(h[i] - h[i + 1]) + f(i + 1));
-//    }
-//    if (i + 2 <= n)
-//    {
+//    if(i+2 <= n)
 //       ans = min(ans, abs(h[i] - h[i + 2]) + f(i + 2));
-//    }
-
 //    return dp[i] = ans;
 // }
 
@@ -36,17 +31,11 @@
 
 //    cin >> n;
 //    for (int i = 1;i <= n;i++)
-//    {
-//       cin >> h[i];
-//    }
-
+//        cin >> h[i];
 //    for (int i = 0;i <= n;i++)
-//    {
-//       dp[i] = -1;
-//    }
+//        dp[i] = -1;
 
 //    cout << f(1) << '\n';
-
 //    return 0;
 // }
 
@@ -72,7 +61,7 @@ int main()
     dp[2] = abs(h[1]-h[2]);
     for(int i=3; i<=n; i++)
     {
-        dp[i] = min(dp[i-1]+abs(h[i]-h[i-1]), dp[i-2]+abs(h[i]-h[i-2]));
+        dp[i] = min(dp[i-1] + abs(h[i]-h[i-1]), dp[i-2] + abs(h[i]-h[i-2]));
     }
     cout << dp[n] << nl;
     return 0;
