@@ -5,7 +5,7 @@ int main()
     scanf("%d", &tk);
     if(tk >= 5000)
     {
-        printf("Cod's Bazar Jabo\n");
+        printf("Cox's Bazar Jabo\n");
         if (tk >= 10000)
         {
             printf("Saint Martin jabo\n");
