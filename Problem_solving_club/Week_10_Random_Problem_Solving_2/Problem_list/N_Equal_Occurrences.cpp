@@ -32,3 +32,67 @@ int main()
     }
     return 0;
 }
+
+
+
+// AUTHOR :- ABDUL AZIZ TAMIM
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl "\n"
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int tc;
+    cin >> tc;
+    while(tc--)
+    {
+        ll n, h;
+        cin >> n >> h;
+        vector<ll> a(n);
+        for(int i = 0; i < n; i++)
+            cin >> a[i];
+        sort(a.begin(), a.end());
+        vector<vector<int>> perms =
+        {
+            {2,2,3},
+            {2,3,2},
+            {3,2,2}
+        };
+
+        int answer = 0;
+
+        for(int p = 0; p < 3; p++)
+        {
+            ll power = h;
+            int serum_index = 0;
+            int count = 0;
+
+            for(int i = 0; i < n; i++)
+            {
+                while(serum_index < 3 && power <= a[i])
+                {
+                    power *= perms[p][serum_index];
+                    serum_index++;
+                }
+
+                if(power > a[i])
+                {
+                    power += a[i] / 2;
+                    count++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            answer = max(answer, count);
+        }
+
+        cout << answer << nl;
+    }
+
+    return 0;
+}

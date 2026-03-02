@@ -12,45 +12,37 @@ int main()
     cin >> tc;
     while(tc--)
     {
-        ll n, h;
-        cin >> n >> h;
-        vector<ll> a(n);
+        ll n,m;
+        cin >> n >>m;
+        vector<int> arr(n);
         for(int i=0; i<n; i++)
-            cin >> a[i];
-        int outpt = 0;
-        sort(a.begin(), a.end());
-        vector<int> m = {2, 2 , 3};
-        do
+            cin >> arr[i];
+        sort(arr.begin(), arr.end());
+        vector<vector<int>> per = {{2,2,3},{2,3,2},{3,2,2}};
+        int ans = 0;
+        for(int j=0; j<3; j++)
         {
-            int mi = 0, cnt = 0;
-            ll ans = h;
+            ll hig = m;
+            ll idx = 0;
+            int cnt = 0;
             for(int i=0; i<n; i++)
             {
-                if(a[i] < ans)
+                while(idx < 3 && hig <= arr[i])
                 {
-                    ans += (a[i]/2);
+                    hig *= per[j][idx];
+                    idx++;
+                }
+                if(hig > arr[i])
+                {
+                    hig += arr[i]/2;
                     cnt++;
                 }
                 else
-                {
-                    if(mi == 3)
-                        break;
-                    while(mi<3 && ans <= a[i])
-                    {
-                        ans *= m[mi];
-                    }
-                    if(ans <= a[i])
-                        break;
-                    else
-                    {
-                        ans += (a[i]/2);
-                        cnt++;
-                    }
-                }
+                    break;
             }
-            outpt = max(outpt, cnt);
-        } while (next_permutation(m.begin(), m.end()));
-        cout << outpt << nl;
+            ans = max(ans,cnt);
+        }
+        cout << ans << nl;
     }
     return 0;
 }
