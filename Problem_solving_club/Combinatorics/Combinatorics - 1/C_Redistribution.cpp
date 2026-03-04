@@ -12,7 +12,7 @@ ll f(int i)
     if(i == 0)
         return 1;
     if(dp[i] != -1)
-        return dp[i];
+        return dp[i];     
     ll ans = 0;
     for(int j=3; j<=i; j++)
         ans = (ans + f(i-j)) % modN;

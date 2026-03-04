@@ -1,7 +1,11 @@
+// AUTHOR :- ABDUL AZIZ TAMIM
 #include<bits/stdc++.h>
 using namespace std;
-long long int dp[1005];
-int fibonacci(long long int n) // O(N)
+#define ll long long
+#define nl "\n"
+#define sp " "
+ll dp[1005];
+int fibonacci(ll n)
 {
     if(n==0 || n==1)
         return n;
@@ -12,8 +16,10 @@ int fibonacci(long long int n) // O(N)
 }
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
     memset(dp,-1,sizeof(dp));
-    long long int n;
+    ll n;
     cin >> n;
     cout << fibonacci(n);
     return 0;
