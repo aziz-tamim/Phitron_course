@@ -4,40 +4,12 @@ using namespace std;
 #define ll long long
 #define nl "\n"
 #define sp " "
-ll dp[1005];
-int fibonacci(ll n)
-{
-    if(n==0 || n==1)
-        return n;
-    if(dp[n] != -1)
-        return dp[n];
-    dp[n] = fibonacci(n-1) + fibonacci(n-2);
-    return dp[n];
-}
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    memset(dp,-1,sizeof(dp));
-    ll n;
-    cin >> n;
-    cout << fibonacci(n);
-    return 0;
-}
-
-
-// AUTHOR :- ABDUL AZIZ TAMIM
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define nl "\n"
-#define sp " "
-const int nmax = 2e6+5;
+const int nmax = 1e6+5;
 const int mod = 1000000007;
 ll fact[nmax+5];
 ll bin_expo(int a, int b)
 {
-    if(b==0)
+    if(b == 0)
         return 1%mod;
     ll x = bin_expo(a,b/2);
     if(b&1)
@@ -63,10 +35,19 @@ ll npr(int n, int r)
 }
 void solve(int tc)
 {
-    int n,r;
-    cin >> n >> r;
-    cout << "Case " << tc << ": ";
-    cout << ncr(n+r-1, r-1) << nl;
+    int n;
+    cin >> n;
+    vector<ll> arr(n);
+    for(int i=0; i<n; i++)
+        cin >> arr[i];
+    ll ans = 1;
+    ll sum = arr[0];
+    for(int i=1; i<n; i++)
+    {
+        ans = (ans * ncr(sum+arr[i]-1, arr[i]-1))%mod;
+        sum += arr[i];
+    }
+    cout << "Case " << tc << ": " << ans << nl;
 }
 int main()
 {
@@ -75,9 +56,8 @@ int main()
     fact[0] = 1;
     for(ll i=1; i<nmax; i++)
     {
-        fact[i] = (fact[i-1] * i)% mod;
+        fact[i] = (fact[i-1]*i)%mod;
     }
-    
     int tc;
     cin >> tc;
     for(int i=1; i<=tc; i++)
