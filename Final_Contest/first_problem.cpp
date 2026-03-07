@@ -1,7 +1,6 @@
 // একটা সংখ্যা N ইনপুট দেওয়া হবে। যদি ওই সংখ্যার ভেতরে digit 7 থাকে, তাহলে "Lucky" প্রিন্ট করতে হবে, নাহলে "Not Lucky"।
 #include <bits/stdc++.h>
 using namespace std;
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
