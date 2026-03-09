@@ -14,14 +14,12 @@ int main()
     {
         int n;
         cin >> n;
-        set<int> st;
-        for(int i=0; i<n; i++)
+        ll sum = 0;
+        for(int i=0; i<=n; i+=2)
         {
-            int x;
-            cin >> x;
-            st.insert(x);
+            sum += i;
         }
-        cout << st.size() << nl;
+        cout << sum << nl;
     }
     return 0;
 }
