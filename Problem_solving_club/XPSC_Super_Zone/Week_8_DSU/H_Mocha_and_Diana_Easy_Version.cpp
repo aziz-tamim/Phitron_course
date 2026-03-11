@@ -1,40 +1,16 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    stack<int> st;
-    int n;
-    cin >> n;
-    for(int i=0; i<n; i++)
-    {
-        int val;
-        cin >> val;
-        st.push(val);
-    }
-
-    while(!st.empty())
-    {
-        cout << st.top() << endl;
-        st.pop();
-    }
-    return 0;
-}
-
-
 // AUTHOR :- ABDUL AZIZ TAMIM
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define nl "\n"
 #define sp " "
-
 struct DSU
 {
     vector<int> par, rnk, siz, mini, maxi;
     int c;
     DSU(int n) : par(n+1,-1), rnk(n+1,0), siz(n+1,1), c(n), mini(n+1,-1), maxi(n+1,-1)
     {
-        for(int i=1; i<=n ;i++)
+        for(int i=1; i<=n; i++)
         {
             par[i] = i;
             mini[i] = maxi[i] = i;
@@ -76,44 +52,38 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
     int n, m1, m2;
     cin >> n >> m1 >> m2;
-
-    DSU Mocha(n), Diana(n);
-
-    for(int i=0;i<m1;i++)
+    DSU s1(n), s2(n);
+    for(int i=0; i<m1; i++)
     {
         int u,v;
         cin >> u >> v;
-        Mocha.merge(u,v);
+        s1.merge(u,v);
     }
-
-    for(int i=0;i<m2;i++)
+    for(int i=0; i<m2; i++)
     {
         int u,v;
         cin >> u >> v;
-        Diana.merge(u,v);
+        s2.merge(u,v);
     }
-
     vector<pair<int,int>> ans;
-
-    for(int i=1;i<=n;i++)
+    for(int i=1; i<=n; i++)
     {
-        for(int j=i+1;j<=n;j++)
+        for(int j=i+1;j<=n; j++)
         {
-            if(!Mocha.same(i,j) && !Diana.same(i,j))
+            if(s1.same(i,j) == false && s2.same(i,j) == false)
             {
                 ans.push_back({i,j});
-                Mocha.merge(i,j);
-                Diana.merge(i,j);
+                s1.merge(i,j);
+                s2.merge(i,j);
             }
         }
     }
-
     cout << ans.size() << nl;
-    for(auto &p : ans)
-        cout << p.first << sp << p.second << nl;
-
+    for(auto &x : ans)
+    {
+        cout<< x.first << sp << x.second << nl;
+    }
     return 0;
 }
