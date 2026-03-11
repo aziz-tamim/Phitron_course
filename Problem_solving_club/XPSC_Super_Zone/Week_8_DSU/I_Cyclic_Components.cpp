@@ -4,16 +4,19 @@ using namespace std;
 #define ll long long
 #define nl "\n"
 #define sp " "
-const int maxN = 1e5+5;
+const int maxN = 2e5+5;
 bool vis[maxN];
 vector<int> adj_list[maxN];
 int par[maxN];
 
 int cnt1,cnt2;
+bool is_cycle;
 void dfs(int src)
 {
     vis[src] = true;
     cnt1++;
+    if(adj_list[src].size() != 2)
+        is_cycle = false;
     cnt2 += adj_list[src].size();
     for(int x : adj_list[src])
     {
@@ -40,10 +43,12 @@ int main()
     {
         if(vis[i] == false)
         {
-            cnt1 = 0, cnt2 = 0;
+            cnt1 = 0;
+            cnt2 = 0;
+            is_cycle = true;
             dfs(i);
             cnt2 /= 2;
-            if(cnt1 >= 3 && cnt1 == cnt2)
+            if(cnt1 >= 3 && is_cycle && cnt1 == cnt2)
                 cycle_com++;
         }
     }
