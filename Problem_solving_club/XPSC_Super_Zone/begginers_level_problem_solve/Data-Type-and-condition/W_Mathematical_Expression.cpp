@@ -13,7 +13,7 @@ int main()
     cin >> a >> s >> b >> q >> c;
     int result;
     if(s == '+')
-        result = a+b;
+        result = a+b;   
     else if(s == '-')
         result = a-b;
     else if(s == '*')
