@@ -8,9 +8,12 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    ll n;
-    cin >> n;
-    ll ans = n*(n+1)/2;
-    cout << ans << nl;
+    string f1, s1;
+    string f2, s2;
+    cin >> f1 >> s1 >> f2 >> s2;
+    if(s1 == s2)
+        cout << "ARE Brothers" << nl;
+    else
+        cout << "NOT" << nl;
     return 0;
 }

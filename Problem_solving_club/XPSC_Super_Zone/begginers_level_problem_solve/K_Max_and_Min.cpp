@@ -8,9 +8,10 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    ll n;
-    cin >> n;
-    ll ans = n*(n+1)/2;
-    cout << ans << nl;
+    int a,b,c;
+    cin >> a >> b >> c;
+    int mn = min({a,b,c});
+    int mx = max({a,b,c});
+    cout << mn << " " << mx << nl;
     return 0;
 }
