@@ -17,4 +17,3 @@ int main()
     cout << a << nl << b << nl << c << nl << d << nl << e << nl;
     return 0;
 }
-// Pocket mistouch prevention is on
