@@ -55,9 +55,9 @@ int main()
     build(1,1,n);
     while(q--)
     {
-        int i,x;
+        int i, x;
         cin >> i >> x;
-        update(1,1,n,i,x);
+        update(1, 1, n, i, x);
         cout << t[1] << nl;
     }
     return 0;
