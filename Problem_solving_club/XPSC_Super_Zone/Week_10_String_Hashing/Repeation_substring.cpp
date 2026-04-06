@@ -101,7 +101,7 @@ int main()
         }
         else
         {
-            r = mid - 1;
+            r = mid-1;
         }
     }
     // cout << s.substr(idx, ans) << nl;
