@@ -100,9 +100,7 @@ int main()
             l = mid + 1;
         }
         else
-        {
             r = mid-1;
-        }
     }
     // cout << s.substr(idx, ans) << nl;
     if(ans == -1)
