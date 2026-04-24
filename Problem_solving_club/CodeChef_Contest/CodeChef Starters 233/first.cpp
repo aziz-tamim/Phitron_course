@@ -9,8 +9,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     int n;
-    cin >>n;
-    if (n >= 5)
+    cin >> n;
+    if(n >= 5)
         cout << n * 85;
     else
         cout << n * 100;

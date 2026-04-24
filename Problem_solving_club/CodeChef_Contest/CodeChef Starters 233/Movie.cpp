@@ -12,7 +12,7 @@ int main()
     cin >> tc;
     while(tc--)
     {
-        int n,m,a,b,c;
+        int n, m, a, b, c;
         cin >> n >> m >> a >> b >> c;
         int s = min(n,m);
         int cst = s*c+(n-s) * a+(m-s) * b;

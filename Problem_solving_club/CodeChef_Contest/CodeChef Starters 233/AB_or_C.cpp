@@ -25,7 +25,7 @@ int main()
         }
         sort(v.begin(), v.end());
         vector<int> freq(n,0);
-        int tst = 0, l =0, ans =INT_MAX;
+        int tst = 0, l = 0, ans = INT_MAX;
         for(int j=0; j < v.size(); j++)
         {
             if(freq[v[j].second] == 0)
