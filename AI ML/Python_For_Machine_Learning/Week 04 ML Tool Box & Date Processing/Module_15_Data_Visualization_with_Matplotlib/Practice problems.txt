@@ -1,0 +1,9 @@
+﻿Dataset : Python-for-ML/student_IQdata.csv at main · phitronio/Python-for-ML
+
+
+1. Load the dataset from the URL into a pandas DataFrame.
+2. Create a scatter plot with Study_Hours on the X-axis and IQ on the Y-axis.
+3. Create a scatter plot with Shoe_Size on the X-Axis and Study_Hours on the Y-axis. 
+4. Create a histogram of Shoe_Size
+5. Add a title and axis labels to make the plot clear.
+6. After you plot it, answer the question: Does there appear to be a correlation?
