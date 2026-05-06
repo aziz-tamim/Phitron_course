@@ -1,0 +1,55 @@
+﻿Practice Problems
+
+Dataset : https://github.com/phitronio/Python-for-ML/blob/main/Practice%20Day%20(1).csv
+________________
+
+1. Add New Column and Save File
+You have a DataFrame with column Price.
+Create a new column Discounted_Price with (10% discounted price).
+Save the modified DataFrame as discounted_products.csv.
+________________
+
+
+2. Check Duplicates and Remove Them
+Column: EmployeeID
+ Tasks:
+  * Count duplicate entries
+  * Remove duplicates
+  * Display cleaned DataFrame
+
+________________
+
+3. Handle Missing Values
+Columns: Age, Salary
+ Tasks:
+  * Count missing values
+  * Fill missing Age with mean age
+  * Drop rows where Salary is missing
+________________
+
+4. Apply Statistical Functions
+Columns: Marks1, Marks2, Marks3
+ Tasks:
+  * Calculate mean, max for each subject
+  * Compute total marks per student
+  * Find standard deviation of total marks
+
+________________
+
+5. Histogram, Bar, Scatter, Pie
+Create:
+  * Histogram of Age
+  * Scatter plot (Age vs Salary)
+  * Scatter plot ( Price vs Discounted Price) 
+
+________________
+
+6. 
+Dataset : Python-for-ML/student_IQdata.csv at main · phitronio/Python-for-ML
+
+  1. Load the dataset from the URL into a pandas DataFrame.
+  2. Create a scatter plot with Study_Hours on the X-axis and IQ on the Y-axis.
+  3. Create a scatter plot with Shoe_Size on the X-Axis and Study_Hours on the Y-axis. 
+  4. Create a histogram of Shoe_Size
+  5. Add a title and axis labels to make the plot clear.
+  6. After you plot it, answer the question: Does there appear to be a correlation?
