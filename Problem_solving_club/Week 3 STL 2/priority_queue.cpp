@@ -21,7 +21,6 @@ int main()
     // cout << "Size -> " << pq.size() << "\n";
     // cout << pq.empty() << "\n";
 
-
     while(!pq.empty())
     {
         int value = pq.top();
