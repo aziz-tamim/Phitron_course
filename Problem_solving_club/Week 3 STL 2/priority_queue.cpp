@@ -11,13 +11,12 @@ int main()
     pq.push(5);
     pq.push(3);
     pq.push(2);
-    
-    // cout << pq.top() << "\n"; // O(1)
-    // pq.pop();
-    // cout << pq.top() << "\n"; // O(1)
-    // pq.pop();
-    // cout << pq.top() << "\n"; // O(1)
 
+    // cout << pq.top() << "\n"; // O(1)
+    // pq.pop();
+    // cout << pq.top() << "\n"; // O(1)
+    // pq.pop();
+    // cout << pq.top() << "\n"; // O(1)
     // cout << "Size -> " << pq.size() << "\n";
     // cout << pq.empty() << "\n";
 
