@@ -23,5 +23,6 @@ int main()
         sort(ans.begin(),ans.end());
         cout << ans << "\n";
     }
+    
     return 0;
 }
