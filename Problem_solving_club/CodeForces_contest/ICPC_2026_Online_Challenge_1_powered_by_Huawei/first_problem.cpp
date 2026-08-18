@@ -186,7 +186,6 @@ int main()
                 busyE = true;
             }
         }
-
         for(int k = 0; k < K; k++)
         {
             if(busyC[k]) continue;
@@ -222,12 +221,15 @@ int main()
 
         string res = to_string(out.size());
         res += "\n";
+
         for(auto &s : out)
         {
             res += s;
             res += "\n";
         }
+
         cout << res << flush;
     }
+    
     return 0;
 }
