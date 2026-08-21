@@ -21,10 +21,10 @@ int main()
         vector<string> abbr(m);
         for(auto &a : abbr)
             cin >> a;
-        bool available[26] = {false};
+        bool avil[26] = {false};
         for(auto &w : words)
         {
-            available[w[0]-'a'] = true;
+            avil[w[0]-'a'] = true;
         }
 
         vector<bool> done(m, false);
@@ -40,7 +40,7 @@ int main()
                 bool ok = true;
                 for(char c : abbr[i])
                 {
-                    if(!available[c-'A'])
+                    if(!avil[c-'A'])
                     {
                         ok = false;
                         break;
@@ -50,7 +50,7 @@ int main()
                 {
                     done[i] = true;
                     doneCount++;
-                    available[abbr[i][0]-'A'] = true;
+                    avil[abbr[i][0]-'A'] = true;
                     changed = true;
                 }
             }
