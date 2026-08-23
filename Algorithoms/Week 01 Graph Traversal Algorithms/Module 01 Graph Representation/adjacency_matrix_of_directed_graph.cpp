@@ -12,7 +12,9 @@ int main()
     //         adj_mat[i][j] = 0;
     //     }
     // }
+
     memset(adj_mat, 0, sizeof(adj_mat));
+    
     for(int i=0; i<n; i++)
     {
         for(int j=0; j<n; j++)
