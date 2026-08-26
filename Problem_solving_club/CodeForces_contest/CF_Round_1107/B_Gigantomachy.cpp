@@ -18,14 +18,12 @@ int main()
         ll a, b, x;
         cin >> a;
         for(int i=1; i<n; i++)
-        {
             cin >> x;
-        }
+
         cin >> b;
         for(int i=1; i<m; i++)
-        {
             cin >> x;
-        }
+
         ll bea = a + n-1;
         ll ver = b + m-1;
 
