@@ -14,7 +14,6 @@ int main()
     {
         int n, m;
         cin >> n >> m;
-
         ll a, b, x;
         cin >> a;
         for(int i=1; i<n; i++)
