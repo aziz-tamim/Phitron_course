@@ -20,7 +20,6 @@ int main() {
 
     int tc;
     cin >> tc;
-
     while (tc--) {
         int n;
         cin >> n;
@@ -38,12 +37,10 @@ int main() {
             for (int bit = 30; bit >= 0; bit--)
             {
                 int b = (x >> bit) & 1;
-
                 if (trie[node].child[b] == -1) {
                     trie[node].child[b] = trie.size();
                     trie.emplace_back();
                 }
-
                 node = trie[node].child[b];
             }
         };
