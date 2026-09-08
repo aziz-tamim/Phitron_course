@@ -1,8 +1,11 @@
+// AUTHOR :- ABDUL AZIZ TAMIM
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define nl "\n"
+#define sp " "
 
-class Node
-{
+class Node {
     public:
         int val;
         Node* next;
@@ -10,7 +13,10 @@ class Node
 
 int main()
 {
-    Node a,b,c;
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    Node a, b, c;
     a.val = 10;
     b.val = 20;
     c.val = 30;
@@ -19,8 +25,8 @@ int main()
     b.next = &c;
     c.next = NULL;
 
-    cout << a.val << endl;
-    cout << a.next->val << endl;
-    cout << a.next->next->val << endl;
+    cout << a.val << nl;
+    cout << a.next->val << nl;
+    cout << a.next->next->val << nl;
     return 0;
 }
