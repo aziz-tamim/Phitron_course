@@ -12,30 +12,23 @@ int main()
 
     int tc;
     cin >> tc;
-
     while(tc--)
     {
         int n;
         cin >> n;
 
         vector<int> a(n);
-
         for(int i = 0; i < n; i++)
-        {
             cin >> a[i];
-        }
 
         bool ok = true;
         int last = n + 1;
-
-        for(int i = 0; i < n; i++)
+        for(int i=0; i<n; i++)
         {
-            if(a[i] != i + 1)
+            if(a[i] != i+1)
             {
                 if(a[i] < last)
-                {
                     last = a[i];
-                }
                 else
                 {
                     ok = false;
