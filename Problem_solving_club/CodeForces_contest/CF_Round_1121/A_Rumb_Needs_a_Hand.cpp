@@ -36,12 +36,10 @@ int main()
                 }
             }
         }
-
         if(ok)
             cout << "YES" << nl;
         else
             cout << "NO" << nl;
     }
-
     return 0;
 }
