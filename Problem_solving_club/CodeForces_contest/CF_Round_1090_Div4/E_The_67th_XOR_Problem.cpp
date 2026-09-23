@@ -65,7 +65,6 @@ int main() {
             }
             return res;
         };
-
         // Insert first element
         insert(a[0]);
         ll ans = 0;
