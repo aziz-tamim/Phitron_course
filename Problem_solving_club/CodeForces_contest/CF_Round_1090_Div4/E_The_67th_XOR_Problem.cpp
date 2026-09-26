@@ -31,7 +31,6 @@ int main() {
         auto insert = [&](ll x)
         {
             int node = 0;
-
             for(int bit = 30; bit >= 0; bit--)
             {
                 int b = (x >> bit) & 1;
