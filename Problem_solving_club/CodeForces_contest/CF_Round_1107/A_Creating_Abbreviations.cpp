@@ -14,7 +14,6 @@ int main()
     {
         int n, m;
         cin >> n >> m;
-
         vector<string> words(n);
         for(auto &w : words)
             cin >> w;
@@ -26,7 +25,6 @@ int main()
         {
             avil[w[0]-'a'] = true;
         }
-
         vector<bool> done(m, false);
         int doneCount = 0;
         bool changed = true;
