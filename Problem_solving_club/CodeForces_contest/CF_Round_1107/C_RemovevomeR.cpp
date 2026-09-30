@@ -22,9 +22,12 @@ int main()
                 cnt++;
         }
         if(cnt == 2)
+        {
             cout << 2 << nl;
-        else
+        }
+        else {
             cout << 1 << nl;
+        }
     }
     return 0;
 }
