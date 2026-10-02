@@ -4,7 +4,6 @@ using namespace std;
 #define ll long long
 #define nl "\n"
 #define sp " "
-
 bool isPerfectSquare(ll x)
 {
     ll r = (ll)sqrtl((long double)x);
@@ -36,6 +35,7 @@ int main()
             adj[u].push_back(v);
             adj[v].push_back(u);
         }
+
         vector<int> parent(n+1, 0), order;
         order.reserve(n);
         vector<bool> vis(n+1, false);
@@ -80,6 +80,5 @@ int main()
         }
         cout << ans << nl;
     }
-    
     return 0;
 }
