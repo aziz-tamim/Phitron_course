@@ -26,7 +26,6 @@ int main()
         vector<ll> a(n+1);
         for(int i=1; i<=n; i++)
             cin >> a[i];
-        
         vector<vector<int>> adj(n+1);
         for(int i=0; i<n-1; i++)
         {
@@ -35,7 +34,6 @@ int main()
             adj[u].push_back(v);
             adj[v].push_back(u);
         }
-
         vector<int> parent(n+1, 0), order;
         order.reserve(n);
         vector<bool> vis(n+1, false);
