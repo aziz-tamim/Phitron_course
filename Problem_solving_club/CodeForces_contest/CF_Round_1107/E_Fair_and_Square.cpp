@@ -51,8 +51,10 @@ int main()
                 }
             }
         }
+
         vector<ll> sz(n+1, 1), s2(n+1,1), s3(n+1, 1);
-        for(int i=(int)order.size()-1; i>=0; i--){
+        for(int i=(int)order.size()-1; i>=0; i--)
+        {
             int v = order[i];
             int p = parent[v];
             if(p!= 0)
