@@ -43,8 +43,10 @@ int main()
             int u=q.front();
             q.pop();
             order.push_back(u);
-            for(int v: adj[u]){
-                if(!vis[v]){
+            for(int v: adj[u])
+            {
+                if(!vis[v]) 
+                {
                     vis[v] = true;
                     parent[v] = u;
                     q.push(v);
