@@ -8,7 +8,6 @@ struct Edge {
 int n, m;
 vector<Edge> edges;
 vector<vector<pair<int, int>>> adj;
-
 vector<int> tin, low;
 vector<bool> required;
 int timer;
@@ -43,7 +42,6 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
     int tc;
     cin >> tc;
 
