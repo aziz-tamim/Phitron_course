@@ -11,14 +11,12 @@ vector<vector<pair<int, int>>> adj;
 vector<int> tin, low;
 vector<bool> required;
 int timer;
-
 bool dfs(int u, int parentEdge) {
     tin[u] = low[u] = ++timer;
     bool hasN = (u == n);
     for (auto [v, id] : adj[u]) {
         if (id == parentEdge)
             continue;
-
         if (tin[v]) {
             low[u] = min(low[u], tin[v]);
         }
@@ -64,17 +62,12 @@ int main()
         tin.assign(n + 1, 0);
         low.assign(n + 1, 0);
         required.assign(m + 1, false);
-
         timer = 0;
-
         dfs(1, -1);
-
         vector<int> dist(n + 1, INF);
         vector<int> bestEdge(n + 1, INF);
-
         using State = tuple<int, int, int>;
         priority_queue<State, vector<State>, greater<State>> pq;
-
         for (int id = 1; id <= m; id++) {
             if (!required[id])
                 continue;
