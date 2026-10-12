@@ -71,9 +71,7 @@ int main()
         for (int id = 1; id <= m; id++) {
             if (!required[id])
                 continue;
-
             auto [u, v] = edges[id];
-
             if (dist[u] > 0 ||
                 (dist[u] == 0 && id < bestEdge[u])) 
             {
