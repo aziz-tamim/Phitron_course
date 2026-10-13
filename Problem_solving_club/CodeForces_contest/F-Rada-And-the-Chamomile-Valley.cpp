@@ -49,7 +49,8 @@ int main()
         edges.assign(m + 1, {});
         adj.assign(n + 1, {});
 
-        for (int i = 1; i <= m; i++) {
+        for (int i = 1; i <= m; i++)
+        {
             int u, v;
             cin >> u >> v;
 
@@ -75,15 +76,14 @@ int main()
             if (dist[u] > 0 ||
                 (dist[u] == 0 && id < bestEdge[u])) 
             {
-
                 dist[u] = 0;
                 bestEdge[u] = id;
                 pq.push({0, id, u});
             }
 
             if (dist[v] > 0 ||
-                (dist[v] == 0 && id < bestEdge[v])) {
-
+                (dist[v] == 0 && id < bestEdge[v]))
+                {
                 dist[v] = 0;
                 bestEdge[v] = id;
                 pq.push({0, id, v});
