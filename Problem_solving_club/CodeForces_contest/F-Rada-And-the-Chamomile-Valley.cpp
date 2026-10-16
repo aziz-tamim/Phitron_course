@@ -23,7 +23,6 @@ bool dfs(int u, int parentEdge) {
         else {
             bool childHasN = dfs(v, id);
             low[u] = min(low[u], low[v]);
-            
             if (low[v] > tin[u]) {
                 if (childHasN)
                     required[id] = true;
@@ -46,7 +45,6 @@ int main()
         cin >> n >> m;
         edges.assign(m + 1, {});
         adj.assign(n + 1, {});
-
         for (int i = 1; i <= m; i++)
         {
             int u, v;
