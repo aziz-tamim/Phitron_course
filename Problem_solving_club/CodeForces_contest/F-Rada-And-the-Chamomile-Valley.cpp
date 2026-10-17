@@ -74,7 +74,6 @@ int main()
                 bestEdge[u] = id;
                 pq.push({0, id, u});
             }
-
             if (dist[v] > 0 ||
                 (dist[v] == 0 && id < bestEdge[v]))
                 {
@@ -90,7 +89,6 @@ int main()
 
             if (d != dist[u] || eid != bestEdge[u])
                 continue;
-
             for (auto [v, id] : adj[u])
             {
                 int nd = d + 1;
