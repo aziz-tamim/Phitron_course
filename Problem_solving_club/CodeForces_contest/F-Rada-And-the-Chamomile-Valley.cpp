@@ -107,12 +107,10 @@ int main()
 
         int q;
         cin >> q;
-
         while (q--)
         {
             int v;
             cin >> v;
-
             cout << (bestEdge[v] == INF ? -1 : bestEdge[v]) << ' ';
         }
         cout << '\n';
