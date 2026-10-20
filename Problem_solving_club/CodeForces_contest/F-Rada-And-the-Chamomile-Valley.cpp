@@ -4,7 +4,6 @@ const int INF = 1e9;
 struct Edge {
     int u, v;
 };
-
 int n, m;
 vector<Edge> edges;
 vector<vector<pair<int, int>>> adj;
@@ -52,7 +51,6 @@ int main()
             adj[u].push_back({v, i});
             adj[v].push_back({u, i});
         }
-
         tin.assign(n + 1, 0);
         low.assign(n + 1, 0);
         required.assign(m + 1, false);
