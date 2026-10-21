@@ -79,7 +79,6 @@ int main()
                 pq.push({0, id, v});
             }
         }
-
         while (!pq.empty()) {
             auto [d, eid, u] = pq.top();
             pq.pop();
@@ -99,7 +98,6 @@ int main()
                 }
             }
         }
-
         int q;
         cin >> q;
         while (q--)
