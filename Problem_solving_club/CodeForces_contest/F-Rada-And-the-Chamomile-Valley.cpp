@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int INF = 1e9;
-struct Edge {
+struct Edge
+{
     int u, v;
 };
+
 int n, m;
 vector<Edge> edges;
 vector<vector<pair<int, int>>> adj;
