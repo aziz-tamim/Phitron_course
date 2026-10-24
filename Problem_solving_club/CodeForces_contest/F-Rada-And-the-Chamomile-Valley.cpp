@@ -32,6 +32,7 @@ bool dfs(int u, int parentEdge) {
     }
     return hasN;
 }
+
 int main()
 {
     ios::sync_with_stdio(false);
