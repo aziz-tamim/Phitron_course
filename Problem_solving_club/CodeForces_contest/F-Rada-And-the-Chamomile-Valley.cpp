@@ -5,7 +5,6 @@ struct Edge
 {
     int u, v;
 };
-
 int n, m;
 vector<Edge> edges;
 vector<vector<pair<int, int>>> adj;
