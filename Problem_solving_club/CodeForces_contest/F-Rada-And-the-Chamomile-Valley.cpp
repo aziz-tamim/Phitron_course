@@ -5,16 +5,19 @@ struct Edge
 {
     int u, v;
 };
+
 int n, m;
 vector<Edge> edges;
 vector<vector<pair<int, int>>> adj;
 vector<int> tin, low;
 vector<bool> required;
 int timer;
-bool dfs(int u, int parentEdge) {
+bool dfs(int u, int parentEdge)
+{
     tin[u] = low[u] = ++timer;
     bool hasN = (u == n);
-    for (auto [v, id] : adj[u]) {
+    for (auto [v, id] : adj[u])
+    {
         if (id == parentEdge)
             continue;
         if (tin[v]) {
