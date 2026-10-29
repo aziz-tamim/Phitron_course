@@ -4,7 +4,6 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
     map<int,int> mp;
     mp[10] = 20;
     mp[2] = 12;
