@@ -66,7 +66,6 @@ int main()
     // auto it = mp.lower_bound(6);
     // cout << it->first << " " << it->second << "\n";
 
-
     for(auto it : mp)
     {
         int key = it.first, value = it.second;
