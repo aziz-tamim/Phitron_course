@@ -46,13 +46,11 @@ int main()
     // auto it = mp.find(10);
     // if(it != mp.end())
     //     mp.erase(it);
-
     // for(auto it : mp)
     // {
     //     int key = it.first, value = it.second;
     //     cout << key << " -> " << value << '\n';
     // }
-
     // auto it = mp.begin();
     // it++;
     // cout << it->first << " " << it->second << "\n";
