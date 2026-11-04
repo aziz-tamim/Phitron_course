@@ -11,31 +11,25 @@ int main()
     mp[8] = 22;
     mp[17] = 7;
     mp[5] = 9;
-
     // cout << mp[10] << '\n';s
     // cout << mp[2] << '\n';
-
     // for(auto [key,value]:mp)
     // {
     //     cout << key << " -> " << value << '\n';
     // }
-
     // for(auto it : mp)
     // {
     //     int key = it.first, value = it.second;
     //     cout << key << " -> " << value << '\n';
     // }
     // cout <<'\n';
-
     // auto it=mp.find(25);
     // cout << it->second << '\n';
     // if(it == mp.end())
     //     cout << "Key Not Found" << "\n";
     // else
     //     cout << it->first << " " << it->second << '\n';
-
     // cout << mp[8] << '\n';
-
     // mp.erase(8);
     // for(auto it : mp)
     // {
