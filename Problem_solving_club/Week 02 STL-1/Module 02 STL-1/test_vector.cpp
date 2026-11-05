@@ -52,7 +52,6 @@
 //     //     cout << v[i] << " ";
 //     // }
 //     // cout << "\n";
-
     
 //     vector<int> v;
 //     v.resize(4);
