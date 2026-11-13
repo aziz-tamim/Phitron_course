@@ -52,7 +52,7 @@
 //     //     cout << v[i] << " ";
 //     // }
 //     // cout << "\n";
-    
+
 //     vector<int> v;
 //     v.resize(4);
 //     cout << v.size() << "\n";
@@ -96,7 +96,6 @@ int main()
     //     cout << *it << " ";
     // }
     // cout << "\n";
-
 
     int n; cin >> n;
     vector<int> v;
