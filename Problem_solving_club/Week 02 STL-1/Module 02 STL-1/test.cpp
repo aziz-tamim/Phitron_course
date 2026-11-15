@@ -7,7 +7,6 @@
 //     pair<string, int> student = {"dablu", 10};
 //     // cout << student.first << " " << student.second << "\n";
 //     student.first = "bablu";
-
 //     auto [name,roll] = student;
 //     cout << name << " " << roll << "\n";
 //     return 0;
@@ -49,7 +48,6 @@ int main()
 
     // pair<string, pair<pair<int, string>,pair<int,string>>> par = {"Tamim",{{7,"0188"},{54,"23-24"}}};
     // cout << par.first << " " << par.second.first.first << " " << par.second.first.second << " " << par.second.second.first << " " << par.second.second.second << "\n";
-    
 }
 
 /// Tuple
