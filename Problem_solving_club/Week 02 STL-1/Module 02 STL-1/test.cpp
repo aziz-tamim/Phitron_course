@@ -42,10 +42,8 @@ int main()
     string name = p.first;
     int roll = p.second.first;
     string phoneNumber = p.second.second;
-
     cout << name << " " << roll << " " << phoneNumber << "\n";
     return 0;
-
     // pair<string, pair<pair<int, string>,pair<int,string>>> par = {"Tamim",{{7,"0188"},{54,"23-24"}}};
     // cout << par.first << " " << par.second.first.first << " " << par.second.first.second << " " << par.second.second.first << " " << par.second.second.second << "\n";
 }
